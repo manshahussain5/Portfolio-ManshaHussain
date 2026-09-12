@@ -32,8 +32,8 @@ export default function Hero() {
           <div className="lg:col-span-7 flex flex-col items-start text-left z-10">
             {/* Top Greeting Badge */}
             <motion.div
-              initial={{ opacity: 0, y: 12, filter: "blur(4px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1] }}
               className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-blue-200/80 mb-3.5 shadow-[0_2px_10px_rgba(37,99,235,0.08)] backdrop-blur-md"
             >
@@ -45,8 +45,8 @@ export default function Hero() {
 
             {/* Giant Name Headline */}
             <motion.h1
-              initial={{ opacity: 0, y: 20, filter: "blur(5px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.48, ease: [0.22, 1, 0.36, 1], delay: 0.08 }}
               className="text-3xl xs:text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-slate-900 leading-[1.08] mb-2.5"
             >
@@ -58,8 +58,8 @@ export default function Hero() {
 
             {/* Subtitle / Role */}
             <motion.h2
-              initial={{ opacity: 0, y: 16, filter: "blur(4px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.48, ease: [0.22, 1, 0.36, 1], delay: 0.16 }}
               className="text-lg sm:text-2xl font-bold text-slate-800 mb-3.5 flex flex-wrap items-center gap-1.5"
             >
@@ -72,8 +72,8 @@ export default function Hero() {
 
             {/* Description */}
             <motion.p
-              initial={{ opacity: 0, y: 14, filter: "blur(3px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.48, ease: [0.22, 1, 0.36, 1], delay: 0.24 }}
               className="text-sm sm:text-base text-slate-600 max-w-2xl leading-relaxed mb-6 font-normal"
             >
@@ -157,8 +157,8 @@ export default function Hero() {
 
           {/* Right Column: Hero Portrait & Glossy Tech Elements */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.96, filter: "blur(4px)" }}
-            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
             className="lg:col-span-5 flex items-center justify-center relative mt-6 lg:mt-0"
           >
@@ -193,7 +193,7 @@ export default function Hero() {
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5 sm:h-3 sm:w-3 bg-emerald-500" />
                 </span>
                 <div className="text-left">
-                  <p className="text-[9px] sm:text-[10px] font-semibold text-slate-500 leading-none mb-0.5 sm:mb-1">Status</p>
+                  <p className="text-[9px] sm:text-[10px] font-bold text-slate-600 leading-none mb-0.5 sm:mb-1">Status</p>
                   <p className="text-[11px] sm:text-xs font-bold text-slate-900 leading-none">Available for Work</p>
                 </div>
               </div>
@@ -205,7 +205,7 @@ export default function Hero() {
                 </div>
                 <div className="text-left">
                   <p className="text-xs sm:text-sm font-black text-slate-900 leading-tight">2+ Years</p>
-                  <p className="text-[10px] sm:text-[11px] font-medium text-slate-500 leading-tight">Professional Exp.</p>
+                  <p className="text-[10px] sm:text-[11px] font-semibold text-slate-600 leading-tight">Professional Exp.</p>
                 </div>
               </div>
 

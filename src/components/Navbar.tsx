@@ -24,43 +24,32 @@ export default function Navbar() {
       "contact",
     ];
 
-    let ticking = false;
     const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          setIsScrolled(window.scrollY > 20);
-
-          if (window.scrollY < 120) {
-            setActiveSection("home");
-          } else if (
-            window.innerHeight + window.scrollY >=
-            document.documentElement.scrollHeight - 50
-          ) {
-            setActiveSection("contact");
-          } else {
-            let current = "home";
-            for (const id of sections) {
-              const el = document.getElementById(id);
-              if (el) {
-                const rect = el.getBoundingClientRect();
-                if (rect.top <= 120) {
-                  current = id;
-                }
-              }
-            }
-            setActiveSection(current);
-          }
-          ticking = false;
-        });
-        ticking = true;
-      }
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
 
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-20% 0px -65% 0px", threshold: 0 }
+    );
+
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      observer.disconnect();
     };
   }, []);
 

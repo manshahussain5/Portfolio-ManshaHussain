@@ -301,12 +301,12 @@ export default function ExperienceEducation() {
                               <ExternalLink className="w-3 h-3 text-[#2563EB] opacity-70 group-hover/link:opacity-100 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-all shrink-0" />
                             </a>
                           ) : (
-                            <h4 className="text-xs sm:text-[13px] font-bold text-slate-900 leading-tight truncate">
+                            <span className="text-xs sm:text-[13px] font-bold text-slate-900 leading-tight truncate block">
                               {item.company}
-                            </h4>
+                            </span>
                           )}
-                          <p className="text-[10px] text-slate-400 font-medium flex items-center gap-1">
-                            <MapPin className="w-2.5 h-2.5 text-slate-400" />
+                          <p className="text-[10px] text-slate-600 font-semibold flex items-center gap-1">
+                            <MapPin className="w-2.5 h-2.5 text-slate-500" />
                             <span>{item.location}</span>
                           </p>
                         </div>

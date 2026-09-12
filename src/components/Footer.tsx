@@ -32,7 +32,7 @@ export default function Footer() {
             </div>
             <div>
               <span className="font-bold text-slate-900 text-base">Mansha Hussain</span>
-              <p className="text-[11px] font-semibold text-slate-500">Full Stack &amp; Data Scientist</p>
+              <p className="text-[11px] font-semibold text-slate-600">Full Stack &amp; Data Scientist</p>
             </div>
           </div>
 
@@ -98,7 +98,7 @@ export default function Footer() {
 
         {/* Bottom Bar: Copyright & Back to Top */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-slate-500 text-center sm:text-left">
+          <p className="text-xs text-slate-600 text-center sm:text-left">
             &copy; {new Date().getFullYear()} Mansha Hussain. All Rights Reserved.
           </p>
 

@@ -295,12 +295,12 @@ function FloatingSkill({ skill }: { skill: SkillItem }) {
       </div>
 
       {/* Skill Name */}
-      <h4 className="text-[11px] sm:text-xs font-semibold text-slate-800 group-hover/skill:text-[#2563EB] transition-colors leading-tight mb-0.5 whitespace-nowrap">
+      <span className="text-[11px] sm:text-xs font-semibold text-slate-800 group-hover/skill:text-[#2563EB] transition-colors leading-tight mb-0.5 whitespace-nowrap block">
         {skill.name}
-      </h4>
+      </span>
 
       {/* Percentage */}
-      <span className="text-[10px] font-semibold text-slate-400 mb-1">
+      <span className="text-[10px] font-semibold text-slate-600 mb-1">
         {skill.percentage}%
       </span>
 

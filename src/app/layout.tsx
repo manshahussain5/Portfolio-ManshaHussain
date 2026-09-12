@@ -55,6 +55,52 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  alternates: {
+    canonical: "https://manshahussain-portfolio.vercel.app",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://manshahussain-portfolio.vercel.app/#person",
+      name: "Mansha Hussain",
+      url: "https://manshahussain-portfolio.vercel.app",
+      jobTitle: "Full Stack Developer & Data Scientist",
+      image: "https://manshahussain-portfolio.vercel.app/images/mansha_portrait.jpg",
+      sameAs: [
+        "https://github.com/manshahussain5",
+        "https://www.linkedin.com/in/manshahussain5/",
+      ],
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Lahore",
+        addressCountry: "Pakistan",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://manshahussain-portfolio.vercel.app/#website",
+      url: "https://manshahussain-portfolio.vercel.app",
+      name: "Mansha Hussain Portfolio",
+      publisher: {
+        "@id": "https://manshahussain-portfolio.vercel.app/#person",
+      },
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -64,6 +110,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${fontSans.variable} scroll-smooth`} suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         suppressHydrationWarning
         className="min-h-screen bg-[#F8FAFC] text-slate-800 antialiased selection:bg-[#2563EB] selection:text-white"

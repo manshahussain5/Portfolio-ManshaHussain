@@ -143,44 +143,50 @@ export default function ContactCTA() {
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-2 sm:space-y-2.5">
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label htmlFor="contact-name" className="block text-xs font-bold text-slate-800 mb-1">
                         Your Name
                       </label>
                       <input
+                        id="contact-name"
+                        name="name"
                         type="text"
                         required
                         placeholder="e.g. Alex Morgan"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#2563EB] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2563EB]/20 text-xs sm:text-sm text-slate-900 placeholder-slate-400 transition-all"
+                        className="w-full px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#2563EB] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2563EB]/20 text-xs sm:text-sm text-slate-900 placeholder-slate-500 transition-all"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label htmlFor="contact-email" className="block text-xs font-bold text-slate-800 mb-1">
                         Email Address
                       </label>
                       <input
+                        id="contact-email"
+                        name="email"
                         type="email"
                         required
                         placeholder="alex@company.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#2563EB] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2563EB]/20 text-xs sm:text-sm text-slate-900 placeholder-slate-400 transition-all"
+                        className="w-full px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#2563EB] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2563EB]/20 text-xs sm:text-sm text-slate-900 placeholder-slate-500 transition-all"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label htmlFor="contact-message" className="block text-xs font-bold text-slate-800 mb-1">
                         Your Message
                       </label>
                       <textarea
+                        id="contact-message"
+                        name="message"
                         required
                         rows={3}
                         placeholder="Tell me about your project scope, timeline, or engineering needs..."
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#2563EB] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2563EB]/20 text-xs sm:text-sm text-slate-900 placeholder-slate-400 transition-all resize-none"
+                        className="w-full px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#2563EB] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2563EB]/20 text-xs sm:text-sm text-slate-900 placeholder-slate-500 transition-all resize-none"
                       />
                     </div>
 

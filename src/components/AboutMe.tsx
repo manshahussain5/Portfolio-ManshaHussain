@@ -46,7 +46,7 @@ export default function AboutMe() {
             </p>
 
             <p>
-              I also have experience with <span className="font-semibold text-emerald-600">Google Ads and Meta Ads</span>, allowing me to understand both the technical and business sides of digital products.
+              I also have experience with <span className="font-bold text-emerald-700">Google Ads and Meta Ads</span>, allowing me to understand both the technical and business sides of digital products.
             </p>
           </div>
 
@@ -172,7 +172,7 @@ export default function AboutMe() {
               
               {/* 1. Location - 3D Sky Blue */}
               <div className="p-2.5 sm:p-3 rounded-2xl bg-gradient-to-br from-sky-50/80 via-white to-blue-50/40 border border-sky-200/70 shadow-[0_4px_14px_rgba(14,165,233,0.08),inset_0_1px_1px_rgba(255,255,255,0.95)] hover:border-sky-400 hover:shadow-[0_8px_24px_rgba(14,165,233,0.2)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center">
-                <span className="text-[10px] font-black uppercase tracking-wider text-sky-600 block mb-0.5">
+                <span className="text-[10px] font-black uppercase tracking-wider text-sky-700 block mb-0.5">
                   LOCATION
                 </span>
                 <span className="text-xs font-black text-slate-900">
@@ -182,7 +182,7 @@ export default function AboutMe() {
 
               {/* 2. Availability / Status - 3D Emerald */}
               <div className="p-2.5 sm:p-3 rounded-2xl bg-gradient-to-br from-emerald-50/80 via-white to-teal-50/40 border border-emerald-200/70 shadow-[0_4px_14px_rgba(16,185,129,0.08),inset_0_1px_1px_rgba(255,255,255,0.95)] hover:border-emerald-400 hover:shadow-[0_8px_24px_rgba(16,185,129,0.2)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center">
-                <span className="text-[10px] font-black uppercase tracking-wider text-emerald-600 block mb-0.5">
+                <span className="text-[10px] font-black uppercase tracking-wider text-emerald-700 block mb-0.5">
                   STATUS
                 </span>
                 <span className="inline-flex items-center gap-1.5 text-xs font-black text-slate-900">
@@ -193,7 +193,7 @@ export default function AboutMe() {
 
               {/* 3. Experience - 3D Indigo / Purple */}
               <div className="p-2.5 sm:p-3 rounded-2xl bg-gradient-to-br from-indigo-50/80 via-white to-purple-50/40 border border-indigo-200/70 shadow-[0_4px_14px_rgba(99,102,241,0.08),inset_0_1px_1px_rgba(255,255,255,0.95)] hover:border-indigo-400 hover:shadow-[0_8px_24px_rgba(99,102,241,0.2)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center">
-                <span className="text-[10px] font-black uppercase tracking-wider text-indigo-600 block mb-0.5">
+                <span className="text-[10px] font-black uppercase tracking-wider text-indigo-700 block mb-0.5">
                   EXPERIENCE
                 </span>
                 <span className="text-xs font-black text-slate-900">
@@ -203,7 +203,7 @@ export default function AboutMe() {
 
               {/* 4. Languages - 3D Amber / Orange */}
               <div className="p-2.5 sm:p-3 rounded-2xl bg-gradient-to-br from-amber-50/80 via-white to-orange-50/40 border border-amber-200/70 shadow-[0_4px_14px_rgba(245,158,11,0.08),inset_0_1px_1px_rgba(255,255,255,0.95)] hover:border-amber-400 hover:shadow-[0_8px_24px_rgba(245,158,11,0.2)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center">
-                <span className="text-[10px] font-black uppercase tracking-wider text-amber-600 block mb-0.5">
+                <span className="text-[10px] font-black uppercase tracking-wider text-amber-800 block mb-0.5">
                   LANGUAGES
                 </span>
                 <span className="text-xs font-black text-slate-900">

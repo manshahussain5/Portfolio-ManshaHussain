@@ -41,7 +41,7 @@ export default function Projects() {
             <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100 border-b border-slate-200/80">
               <Image
                 src={project.image}
-                alt={project.title}
+                alt={`Screenshot and interactive preview of ${project.title}`}
                 fill
                 className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"

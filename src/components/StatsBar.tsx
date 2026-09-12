@@ -40,7 +40,7 @@ export default function StatsBar() {
                 <p className="text-xl sm:text-2xl lg:text-3xl font-black text-slate-900 tracking-tight group-hover:text-[#2563EB] transition-colors">
                   {stat.value}
                 </p>
-                <p className="text-[11px] sm:text-xs lg:text-sm font-semibold text-slate-500 leading-tight">
+                <p className="text-[11px] sm:text-xs lg:text-sm font-semibold text-slate-600 leading-tight">
                   {stat.label}
                 </p>
               </div>

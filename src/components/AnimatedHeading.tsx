@@ -46,8 +46,8 @@ export default function AnimatedHeading({
       <div className={`flex flex-col ${isCenter ? "items-center text-center" : "items-start text-left"} max-w-3xl`}>
         {/* Section Heading Text */}
         <motion.h2
-          initial={{ opacity: 0, y: 18, filter: "blur(4px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{
             ...smoothTransition,
@@ -71,8 +71,8 @@ export default function AnimatedHeading({
         {/* Section Subtitle */}
         {subtitle && (
           <motion.p
-            initial={{ opacity: 0, y: 14, filter: "blur(3px)" }}
-            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{
               ...smoothTransition,
@@ -90,8 +90,8 @@ export default function AnimatedHeading({
       {/* Right Element (Buttons, controls) */}
       {rightElement && (
         <motion.div
-          initial={{ opacity: 0, y: 14, filter: "blur(3px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{
             ...smoothTransition,

@@ -71,10 +71,10 @@ export default function Testimonials() {
                   />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-slate-900 leading-tight">
+                  <h3 className="text-sm font-bold text-slate-900 leading-tight">
                     {test.name}
-                  </h4>
-                  <p className="text-[11px] text-slate-500 leading-tight mt-0.5 font-medium">
+                  </h3>
+                  <p className="text-[11px] text-slate-600 leading-tight mt-0.5 font-medium">
                     {test.role}
                   </p>
                 </div>
@@ -106,16 +106,21 @@ export default function Testimonials() {
           <ChevronLeft className="w-4 h-4" />
         </button>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1">
           {testimonials.map((_, i) => (
             <button
               key={i}
+              type="button"
               onClick={() => setActiveIndex(i)}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                activeIndex === i ? "w-6 bg-[#2563EB]" : "w-2 bg-slate-300 hover:bg-slate-400"
-              }`}
+              className="p-2.5 -m-1 flex items-center justify-center rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB]"
               aria-label={`Go to slide ${i + 1}`}
-            />
+            >
+              <span
+                className={`h-2 rounded-full transition-all duration-300 block ${
+                  activeIndex === i ? "w-6 bg-[#2563EB]" : "w-2 bg-slate-300 hover:bg-slate-400"
+                }`}
+              />
+            </button>
           ))}
         </div>
 
