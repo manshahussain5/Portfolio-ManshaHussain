@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle2, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle2, Clock, AlertCircle, Loader2 } from "lucide-react";
 import { GmailIcon, WhatsAppIcon } from "@/components/Icons";
 import { portfolioData } from "@/data/portfolioData";
 import AnimatedHeading from "@/components/AnimatedHeading";
@@ -11,17 +11,40 @@ export default function ContactCTA() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate email dispatch
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setErrorMessage(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Failed to dispatch message.");
+      }
+
       setIsSubmitted(true);
-      setTimeout(() => setIsSubmitted(false), 6000);
       setFormData({ name: "", email: "", message: "" });
-    }, 1000);
+      setTimeout(() => setIsSubmitted(false), 8000);
+    } catch (err: unknown) {
+      const msg =
+        err instanceof Error
+          ? err.message
+          : "An unexpected error occurred. Please reach out via email directly.";
+      setErrorMessage(msg);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -135,13 +158,38 @@ export default function ContactCTA() {
                 {isSubmitted ? (
                   <div className="p-5 rounded-2xl bg-emerald-50 border border-emerald-200 text-center animate-in zoom-in-95 duration-200">
                     <CheckCircle2 className="w-8 h-8 text-emerald-600 mx-auto mb-2" />
-                    <h4 className="text-sm font-bold text-slate-900 mb-1">Message Dispatched!</h4>
-                    <p className="text-xs text-slate-600">
-                      Thank you for reaching out, Mansha will review your message shortly.
+                    <h4 className="text-sm font-bold text-slate-900 mb-1">Message Delivered!</h4>
+                    <p className="text-xs text-slate-600 mb-3">
+                      Thank you for reaching out! Your inquiry has been forwarded directly to Mansha.
                     </p>
+                    <button
+                      type="button"
+                      onClick={() => setIsSubmitted(false)}
+                      className="text-xs font-bold text-[#2563EB] hover:underline cursor-pointer"
+                    >
+                      Send another message &rarr;
+                    </button>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-2 sm:space-y-2.5">
+                    {errorMessage && (
+                      <div className="p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs flex items-start gap-2 animate-in fade-in duration-200">
+                        <AlertCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                        <div>
+                          <p className="font-semibold">{errorMessage}</p>
+                          <p className="mt-1 text-[11px] text-amber-800">
+                            You can also email directly:{" "}
+                            <a
+                              href={`mailto:${personal.email}`}
+                              className="font-bold underline hover:text-[#2563EB]"
+                            >
+                              {personal.email}
+                            </a>
+                          </p>
+                        </div>
+                      </div>
+                    )}
+
                     <div>
                       <label htmlFor="contact-name" className="block text-xs font-bold text-slate-800 mb-1">
                         Your Name
@@ -193,10 +241,13 @@ export default function ContactCTA() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-5 rounded-xl bg-gradient-to-r from-[#2563EB] via-[#3B82F6] to-[#0284C7] hover:brightness-105 text-white text-xs font-bold tracking-wide uppercase transition-all shadow-[0_10px_25px_rgba(37,99,235,0.3)] hover:shadow-[0_15px_35px_rgba(37,99,235,0.45)] disabled:opacity-50 mt-1"
+                      className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-5 rounded-xl bg-gradient-to-r from-[#2563EB] via-[#3B82F6] to-[#0284C7] hover:brightness-105 text-white text-xs font-bold tracking-wide uppercase transition-all shadow-[0_10px_25px_rgba(37,99,235,0.3)] hover:shadow-[0_15px_35px_rgba(37,99,235,0.45)] disabled:opacity-50 mt-1 cursor-pointer"
                     >
                       {isSubmitting ? (
-                        <span>Sending...</span>
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          <span>Dispatching Message...</span>
+                        </>
                       ) : (
                         <>
                           <Send className="w-4 h-4" />
