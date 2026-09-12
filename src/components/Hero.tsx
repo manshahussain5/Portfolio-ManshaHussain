@@ -178,12 +178,12 @@ export default function Hero() {
                   alt="Mansha Hussain - Full Stack Developer & Data Scientist"
                   fill
                   priority
-                  className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover object-top transition-transform duration-700 group-hover:scale-105 z-0"
                   sizes="(max-width: 640px) 270px, (max-width: 768px) 350px, 360px"
                 />
 
                 {/* Subtle vignette gradient over bottom of image */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent pointer-events-none z-10" />
               </div>
 
               {/* Floating Card Top-Right: Available for Freelance */}
