@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg-career" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A0B1A"/>
+      <stop offset="100%" stop-color="#040510"/>
+    </linearGradient>
+    <linearGradient id="purple-blue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg-career)"/>
+  
+  <!-- Subtle Glow Circles -->
+  <circle cx="400" cy="180" r="160" fill="#3B82F6" opacity="0.08"/>
+
+  <!-- App Header -->
+  <rect x="30" y="30" width="740" height="50" rx="10" fill="#0D1129" stroke="#3B82F6" stroke-opacity="0.2"/>
+  <circle cx="60" cy="55" r="10" fill="#8B5CF6"/>
+  <text x="80" y="60" fill="#FFFFFF" font-family="system-ui" font-weight="bold" font-size="14">AI Career Coach</text>
+  <rect x="220" y="45" width="120" height="20" rx="6" fill="#1E1B4B"/>
+  <rect x="630" y="42" width="120" height="26" rx="13" fill="url(#purple-blue)"/>
+  <text x="690" y="59" text-anchor="middle" fill="#FFFFFF" font-family="system-ui" font-size="11" font-weight="600">Simulate Interview</text>
+
+  <!-- Left Column: Roadmap -->
+  <rect x="30" y="100" width="480" height="360" rx="14" fill="#0C0F26" stroke="#1E293B"/>
+  <text x="55" y="135" fill="#FFFFFF" font-family="system-ui" font-size="16" font-weight="bold">Personalized AI Career Roadmap</text>
+  <text x="55" y="155" fill="#818CF8" font-family="system-ui" font-size="12">Target Role: Senior AI Solutions Engineer (Top 5% Match)</text>
+
+  <!-- Stepper Nodes -->
+  <circle cx="75" cy="205" r="16" fill="#22C55E"/>
+  <text x="75" y="210" text-anchor="middle" fill="#FFFFFF" font-family="system-ui" font-size="12" font-weight="bold">✓</text>
+  <line x1="75" y1="225" x2="75" y2="275" stroke="#22C55E" stroke-width="2"/>
+  <text x="105" y="202" fill="#FFFFFF" font-family="system-ui" font-size="14" font-weight="600">Phase 1: Full-Stack Architecture Foundations</text>
+  <text x="105" y="220" fill="#94A3B8" font-family="system-ui" font-size="12">Mastered Next.js, Node.js, and TypeScript pipelines</text>
+
+  <circle cx="75" cy="295" r="16" fill="#3B82F6"/>
+  <text x="75" y="300" text-anchor="middle" fill="#FFFFFF" font-family="system-ui" font-size="12" font-weight="bold">2</text>
+  <line x1="75" y1="315" x2="75" y2="365" stroke="#374151" stroke-width="2"/>
+  <text x="105" y="292" fill="#FFFFFF" font-family="system-ui" font-size="14" font-weight="600">Phase 2: LLM Fine-Tuning &amp; Vector Databases</text>
+  <text x="105" y="310" fill="#60A5FA" font-family="system-ui" font-size="12">In Progress: 78% completion • Gemini &amp; Pinecone</text>
+
+  <circle cx="75" cy="385" r="16" fill="#374151"/>
+  <text x="75" y="390" text-anchor="middle" fill="#9CA3AF" font-family="system-ui" font-size="12" font-weight="bold">3</text>
+  <text x="105" y="382" fill="#D1D5DB" font-family="system-ui" font-size="14" font-weight="600">Phase 3: System Design &amp; Technical Leadership</text>
+  <text x="105" y="400" fill="#6B7280" font-family="system-ui" font-size="12">Upcoming: Distributed AI orchestration &amp; scaling</text>
+
+  <!-- Right Column: AI Insights & Radar -->
+  <rect x="530" y="100" width="240" height="170" rx="12" fill="#0C0F26" stroke="#3B82F6" stroke-opacity="0.3"/>
+  <text x="550" y="130" fill="#A78BFA" font-family="system-ui" font-size="11" font-weight="bold">SKILL GAP ANALYSIS</text>
+  
+  <text x="550" y="160" fill="#FFFFFF" font-family="system-ui" font-size="12">System Design</text>
+  <rect x="550" y="168" width="200" height="6" rx="3" fill="#1F2937"/>
+  <rect x="550" y="168" width="180" height="6" rx="3" fill="#3B82F6"/>
+
+  <text x="550" y="195" fill="#FFFFFF" font-family="system-ui" font-size="12">AI Model Training</text>
+  <rect x="550" y="203" width="200" height="6" rx="3" fill="#1F2937"/>
+  <rect x="550" y="203" width="160" height="6" rx="3" fill="#8B5CF6"/>
+
+  <text x="550" y="230" fill="#FFFFFF" font-family="system-ui" font-size="12">Cloud Deployment</text>
+  <rect x="550" y="238" width="200" height="6" rx="3" fill="#1F2937"/>
+  <rect x="550" y="238" width="190" height="6" rx="3" fill="#10B981"/>
+
+  <!-- Right Bottom: Mock Interview Score -->
+  <rect x="530" y="290" width="240" height="170" rx="12" fill="#0C0F26" stroke="#1E293B"/>
+  <text x="550" y="320" fill="#34D399" font-family="system-ui" font-size="11" font-weight="bold">LATEST INTERVIEW SIMULATION</text>
+  <text x="550" y="355" fill="#FFFFFF" font-family="system-ui" font-size="28" font-weight="bold">92<tspan font-size="14" fill="#9CA3AF">/100</tspan></text>
+  <text x="550" y="380" fill="#94A3B8" font-family="system-ui" font-size="12">"Exceptional problem solving and clear architectural explanation."</text>
+  <rect x="550" y="405" width="90" height="24" rx="6" fill="#1E293B"/>
+  <text x="595" y="421" text-anchor="middle" fill="#60A5FA" font-family="system-ui" font-size="11">View Report</text>
+</svg>
