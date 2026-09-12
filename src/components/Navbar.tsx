@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Download, Menu, X } from "lucide-react";
-import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { portfolioData } from "@/data/portfolioData";
 
 export default function Navbar() {
@@ -10,12 +10,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
+
 
   useEffect(() => {
     const sections = [
@@ -114,11 +109,7 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Dynamic Top Scroll Progress Indicator */}
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#2563EB] via-[#4F46E5] to-[#38BDF8] origin-left z-[60] shadow-[0_0_10px_rgba(37,99,235,0.6)]"
-        style={{ scaleX }}
-      />
+
 
       <motion.header
         initial={{ y: -80, opacity: 0 }}
