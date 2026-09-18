@@ -110,16 +110,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${fontSans.variable} scroll-smooth`} suppressHydrationWarning>
-      <head>
+      <head suppressHydrationWarning>
         <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          id="anti-bis"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var o=new MutationObserver(function(ms){for(var i=0;i<ms.length;i++){if(ms[i].attributeName==='bis_skin_checked'){ms[i].target.removeAttribute('bis_skin_checked');}}});o.observe(document.documentElement,{attributes:true,subtree:true,attributeFilter:['bis_skin_checked']});}catch(e){}})();`,
+          }}
         />
       </head>
       <body
         suppressHydrationWarning
         className="min-h-screen bg-[#F8FAFC] text-slate-800 antialiased selection:bg-[#2563EB] selection:text-white"
       >
+        <script
+          id="structured-data-jsonld"
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
