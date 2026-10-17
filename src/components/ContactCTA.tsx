@@ -198,6 +198,7 @@ export default function ContactCTA() {
                         id="contact-name"
                         name="name"
                         type="text"
+                        autoComplete="name"
                         required
                         placeholder="e.g. Alex Morgan"
                         value={formData.name}
@@ -214,6 +215,7 @@ export default function ContactCTA() {
                         id="contact-email"
                         name="email"
                         type="email"
+                        autoComplete="email"
                         required
                         placeholder="alex@company.com"
                         value={formData.email}

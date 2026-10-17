@@ -144,7 +144,7 @@ export const portfolioData = {
       description:
         "AI-powered food recommendation platform with personalized meal plans, macro tracking, and dynamic grocery budgeting.",
       tags: ["Next.js", "AI", "MongoDB", "TailwindCSS"],
-      image: "/images/smart-meal.png",
+      image: "/images/smart-meal-v4.png",
       accentColor: "#2563FF",
       githubUrl: "https://github.com/manshahussain5",
       liveUrl: "https://smart-meal-ai-jsfc.vercel.app/",
@@ -157,7 +157,7 @@ export const portfolioData = {
       description:
         "Comprehensive career advisory and recruitment platform helping candidates optimize portfolios and land top industry roles.",
       tags: ["React", "Node.js", "MongoDB", "TailwindCSS"],
-      image: "/images/my-career.png",
+      image: "/images/my-career-v2.png",
       accentColor: "#3B82F6",
       githubUrl: "https://github.com/manshahussain5",
       liveUrl: "https://www.mycareer.services/",
@@ -170,7 +170,7 @@ export const portfolioData = {
       description:
         "High-performance corporate HVAC systems web presence with interactive booking and quote calculator.",
       tags: ["Next.js", "React", "TailwindCSS", "SEO"],
-      image: "/images/watan-cool.png",
+      image: "/images/watan-cool-v2.png",
       accentColor: "#0284C7",
       githubUrl: "https://github.com/manshahussain5",
       liveUrl: "https://www.watancoolandcool.com/",
@@ -183,7 +183,7 @@ export const portfolioData = {
       description:
         "Modern logistics and on-demand water supply booking web platform serving urban and commercial clients.",
       tags: ["React", "Node.js", "Express", "TailwindCSS"],
-      image: "/images/riyadh-water.png",
+      image: "/images/riyadh-water-v2.png",
       accentColor: "#2563FF",
       githubUrl: "https://github.com/manshahussain5",
       liveUrl: "https://www.riyadhwatertankers.com/",
@@ -209,7 +209,7 @@ export const portfolioData = {
       description:
         "Real-time messaging and collaborative group discussion application built with WebSockets, instant presence, and encrypted rooms.",
       tags: ["React", "Node.js", "WebSockets", "MongoDB"],
-      image: "/images/3.png",
+      image: "/images/3-v2.png",
       accentColor: "#8B5CF6",
       githubUrl: "https://github.com/manshahussain5",
       liveUrl: "https://community-frontend-green.vercel.app/signup",

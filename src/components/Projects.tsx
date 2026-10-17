@@ -8,12 +8,12 @@ import AnimatedHeading from "@/components/AnimatedHeading";
 
 // Canvas background colors matching each mockup canvas exactly
 const projectBgMap: Record<string, string> = {
-  "smart-meal-ai": "#A7A8AD",
-  "my-career": "#A4A5AC",
-  "watan-cool": "#A5A5AB",
-  "riyadh-water": "#A4A4AA",
+  "smart-meal-ai": "#FBCFE8",
+  "my-career": "#A8C6EA",
+  "watan-cool": "#A0D8D8",
+  "riyadh-water": "#A8D8B9",
   "food-safety-system": "#ECABA4",
-  "community-chat-app": "#ADAEB5",
+  "community-chat-app": "#C8B6E2",
 };
 
 export default function Projects() {
@@ -171,7 +171,7 @@ export default function Projects() {
                 {/* Project Title and Category Underneath */}
                 <div className="pt-3 px-1 flex flex-col">
                   <div className="flex items-center justify-between gap-2">
-                    <h3 className="text-base sm:text-lg font-bold text-[#F08234] hover:text-[#EA580C] leading-tight truncate">
+                    <h3 className="text-base sm:text-lg font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent group-hover:opacity-80 transition-opacity leading-tight truncate">
                       {project.title}
                     </h3>
                     {project.liveUrl && (
