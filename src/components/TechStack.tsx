@@ -379,11 +379,11 @@ export default function TechStack() {
 
         {/* Running Floating Rows - Synchronized Pace */}
         <div className="space-y-3 sm:space-y-4 lg:space-y-5">
-          {/* Row 1: Web Development & Digital Marketing */}
-          <MarqueeRow items={webAndMarketingSkills} />
-
-          {/* Row 2: Data Science Step-by-Step */}
+          {/* Row 1: Data Science Step-by-Step */}
           <MarqueeRow items={dataScienceSkills} />
+
+          {/* Row 2: Web Development & Digital Marketing */}
+          <MarqueeRow items={webAndMarketingSkills} />
         </div>
       </div>
     </section>

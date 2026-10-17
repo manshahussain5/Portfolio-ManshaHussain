@@ -45,15 +45,15 @@ const EXPERIENCE_THEMES: Record<string, ExperienceTheme> = {
     cardHoverBg: "hover:bg-gradient-to-b hover:from-white hover:via-blue-50/10 hover:to-white",
   },
   "exp-2": {
-    initials: "AL",
-    badgeBg: "bg-gradient-to-br from-sky-500 via-teal-600 to-emerald-600 text-white shadow-[0_3px_10px_rgba(14,165,233,0.3)]",
-    accentGradient: "from-sky-500 via-teal-600 to-emerald-500",
-    glowAura: "from-sky-500/15 via-teal-500/5 to-transparent",
-    cardBorder: "border border-slate-200/90 shadow-[0_6px_22px_rgba(13,148,136,0.07),0_1px_3px_rgba(0,0,0,0.03)]",
-    borderHover: "hover:border-teal-300 hover:shadow-[0_12px_32px_rgba(13,148,136,0.15)]",
-    tagStyle: "bg-teal-50/80 text-teal-700 border border-teal-200/60",
-    tagHover: "hover:bg-teal-600 hover:text-white hover:border-teal-600",
-    cardHoverBg: "hover:bg-gradient-to-b hover:from-white hover:via-teal-50/10 hover:to-white",
+    initials: "QI",
+    badgeBg: "bg-gradient-to-br from-indigo-600 via-blue-600 to-cyan-500 text-white shadow-[0_3px_10px_rgba(99,102,241,0.3)]",
+    accentGradient: "from-indigo-600 via-blue-600 to-cyan-400",
+    glowAura: "from-indigo-500/15 via-cyan-500/5 to-transparent",
+    cardBorder: "border border-slate-200/90 shadow-[0_6px_22px_rgba(99,102,241,0.07),0_1px_3px_rgba(0,0,0,0.03)]",
+    borderHover: "hover:border-indigo-300 hover:shadow-[0_12px_32px_rgba(99,102,241,0.15)]",
+    tagStyle: "bg-indigo-50/80 text-indigo-700 border border-indigo-200/60",
+    tagHover: "hover:bg-indigo-600 hover:text-white hover:border-indigo-600",
+    cardHoverBg: "hover:bg-gradient-to-b hover:from-white hover:via-indigo-50/10 hover:to-white",
   },
   "exp-3": {
     initials: "FT",
@@ -160,7 +160,14 @@ export default function ExperienceEducation() {
       "Social Media Strategy",
       "Meta Ads",
     ],
-    "exp-2": ["MERN Stack", "React.js", "Node.js", "Express.js", "MongoDB"],
+    "exp-2": [
+      "Python",
+      "Machine Learning",
+      "Data Science",
+      "AI Automation",
+      "Deep Learning",
+      "APIs",
+    ],
     "exp-3": [
       "Social Media",
       "Meta Ads",
@@ -282,38 +289,38 @@ export default function ExperienceEducation() {
 
                   <div className="relative z-10">
                     {/* Header: Monogram + Company Link + Period */}
-                    <div className="flex items-center justify-between gap-2 mb-2">
-                      <div className="flex items-center gap-2.5 min-w-0">
+                    <div className="flex items-start justify-between gap-2.5 mb-2.5">
+                      <div className="flex items-start gap-2.5 min-w-0 flex-1">
                         <div
-                          className={`w-7 h-7 rounded-lg flex items-center justify-center font-black text-[11px] border shrink-0 transition-transform duration-300 group-hover:scale-105 ${theme.badgeBg}`}
+                          className={`w-7 h-7 rounded-lg flex items-center justify-center font-black text-[11px] border shrink-0 mt-0.5 transition-transform duration-300 group-hover:scale-105 ${theme.badgeBg}`}
                         >
                           {theme.initials}
                         </div>
-                        <div className="min-w-0">
+                        <div className="min-w-0 flex-1">
                           {item.companyUrl ? (
                             <a
                               href={item.companyUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="text-xs sm:text-[13px] font-bold text-slate-900 hover:text-[#2563EB] inline-flex items-center gap-1 transition-colors group/link truncate"
+                              className="text-xs sm:text-[13px] font-bold text-slate-900 hover:text-[#2563EB] inline-flex items-center gap-1 transition-colors group/link leading-snug break-words"
                             >
-                              <span className="truncate">{item.company}</span>
+                              <span>{item.company}</span>
                               <ExternalLink className="w-3 h-3 text-[#2563EB] opacity-70 group-hover/link:opacity-100 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-all shrink-0" />
                             </a>
                           ) : (
-                            <span className="text-xs sm:text-[13px] font-bold text-slate-900 leading-tight truncate block">
+                            <span className="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug block break-words">
                               {item.company}
                             </span>
                           )}
-                          <p className="text-[10px] text-slate-600 font-semibold flex items-center gap-1">
-                            <MapPin className="w-2.5 h-2.5 text-slate-500" />
+                          <p className="text-[10px] text-slate-600 font-semibold flex items-center gap-1 mt-0.5">
+                            <MapPin className="w-2.5 h-2.5 text-slate-500 shrink-0" />
                             <span>{item.location}</span>
                           </p>
                         </div>
                       </div>
 
                       <span
-                        className={`inline-flex items-center gap-1.5 text-[10px] font-semibold px-2.5 py-0.5 rounded-md border shrink-0 ${
+                        className={`inline-flex items-center gap-1.5 text-[10px] font-semibold px-2 py-0.5 rounded-md border shrink-0 mt-0.5 whitespace-nowrap ${
                           isCurrent
                             ? "bg-emerald-50 text-emerald-700 border-emerald-200/90 shadow-2xs"
                             : "bg-slate-50 text-slate-600 border-slate-200/80"

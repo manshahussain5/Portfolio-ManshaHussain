@@ -97,19 +97,6 @@ export const portfolioData = {
   ],
   services: [
     {
-      id: "web-dev",
-      title: "Web App Development",
-      description:
-        "High-quality development of web apps at the professional level with responsive, fast, and scalable architecture.",
-      iconName: "Globe",
-      features: [
-        "Next.js 15 & React 19 App Router",
-        "Modern Component Architecture",
-        "SEO, Core Web Vitals & Fast TTFB",
-        "Tailwind CSS & Framer Motion",
-      ],
-    },
-    {
       id: "data-science",
       title: "Data Science & Machine Learning",
       description:
@@ -120,6 +107,19 @@ export const portfolioData = {
         "Data Wrangling & Feature Engineering",
         "Pandas, NumPy & Scikit-learn Pipelines",
         "Data Visualization & Actionable Dashboards",
+      ],
+    },
+    {
+      id: "web-dev",
+      title: "Web App Development",
+      description:
+        "High-quality development of web apps at the professional level with responsive, fast, and scalable architecture.",
+      iconName: "Globe",
+      features: [
+        "Next.js 15 & React 19 App Router",
+        "Modern Component Architecture",
+        "SEO, Core Web Vitals & Fast TTFB",
+        "Tailwind CSS & Framer Motion",
       ],
     },
     {
@@ -265,18 +265,18 @@ export const portfolioData = {
     },
     {
       id: "exp-2",
-      role: "MERN Stack Developer",
-      company: "Advanturalabs",
+      role: "AI & Data Science Software Engineer",
+      company: "Quantum International",
       location: "Lahore - Pakistan",
-      period: "Jan 2025 — Mar 2025",
+      period: "Sep 2025 — Aug 2026",
       description:
-        "Engineered full-stack web applications using MERN stack technologies and modern development practices.",
+        "Engineered web-based software applications, end-to-end data pipelines, and production machine learning models to power intelligent automation and analytics.",
       bullets: [
-        "Developing full-stack web applications using MERN stack technologies.",
-        "Building responsive and interactive user interfaces with React.js.",
-        "Creating robust backend APIs and server-side logic with Node.js and Express.js.",
-        "Designing and implementing MongoDB database schemas for optimal performance.",
-        "Collaborating with cross-functional teams to deliver high-quality solutions.",
+        "Developing and maintaining web-based software applications and seamless API integrations.",
+        "Building and deploying machine learning models and AI-driven automation solutions for practical applications.",
+        "Leveraging Python, data preprocessing, and exploratory visualization to solve core business problems.",
+        "Designing and optimizing database architectures, software integrations, and AI feature pipelines.",
+        "Conducting rigorous testing, debugging, and performance optimization for high-reliability software systems.",
       ],
     },
     {
