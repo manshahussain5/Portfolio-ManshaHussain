@@ -144,7 +144,7 @@ export const portfolioData = {
       description:
         "AI-powered food recommendation platform with personalized meal plans, macro tracking, and dynamic grocery budgeting.",
       tags: ["Next.js", "AI", "MongoDB", "TailwindCSS"],
-      image: "/images/smart-meal-v4.png",
+      image: "/images/smart-meal-v5.png",
       accentColor: "#2563FF",
       githubUrl: "https://github.com/manshahussain5",
       liveUrl: "https://smart-meal-ai-jsfc.vercel.app/",

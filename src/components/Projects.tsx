@@ -8,7 +8,7 @@ import AnimatedHeading from "@/components/AnimatedHeading";
 
 // Canvas background colors matching each mockup canvas exactly
 const projectBgMap: Record<string, string> = {
-  "smart-meal-ai": "#FBCFE8",
+  "smart-meal-ai": "#F3C8C4",
   "my-career": "#A8C6EA",
   "watan-cool": "#A0D8D8",
   "riyadh-water": "#A8D8B9",
