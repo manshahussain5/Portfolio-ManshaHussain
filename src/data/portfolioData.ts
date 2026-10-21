@@ -62,15 +62,15 @@ export const portfolioData = {
     firstName: "Mansha",
     lastName: "Hussain",
     badge: "Hello, I'm",
-    role: "Full Stack Developer & Data Scientist",
-    rolePrefix: "Full Stack Developer & ",
-    roleHighlight: "Data Scientist",
+    role: "Data Scientist & Full Stack Developer",
+    rolePrefix: "Data Scientist & ",
+    roleHighlight: "Full Stack Developer",
     tagline:
-      "Software Engineering graduate focused on web development, data science, and performance marketing (Google & Meta Ads). I build scalable, high-converting digital solutions that drive real business growth.",
+      "Software Engineering graduate focused on data science, machine learning, and high-performance web development. I build scalable, intelligent digital solutions that drive real business growth.",
     aboutHeading: "About Me",
     bio: [
-      "I’m a Full Stack Developer & Data Scientist focused on building scalable web applications, intelligent machine learning systems, and data-driven digital products.",
-      "I specialize in the MERN stack, Next.js, Python, and Scikit-learn, with experience in machine learning and data analysis. I focus on turning complex data into practical insights and fast, reliable applications.",
+      "I’m a Data Scientist & Full Stack Developer focused on building intelligent machine learning systems, scalable web applications, and data-driven digital products.",
+      "I specialize in Python, Scikit-learn, and machine learning workflows, alongside Next.js and modern web architecture. I focus on turning complex data into practical insights and fast, reliable applications.",
       "I also have experience with Google Ads and Meta Ads, allowing me to understand both the technical and business sides of digital products."
     ],
     email: "manshahussain520@gmail.com",
@@ -248,19 +248,19 @@ export const portfolioData = {
   experience: [
     {
       id: "exp-1",
-      role: "AI Engineer & Social Media Marketing Head",
+      role: "AI Engineer",
       company: "Nexbridge Solutions",
       location: "Remote - Pakistan",
       companyUrl: "https://www.nexbridge.solutions/en",
-      period: "Apr 2025 — Present",
+      period: "Sept 2026 — Continue",
       description:
-        "Architecting production-ready AI solutions and machine learning workflows, while spearheading global social media growth and performance marketing campaigns.",
+        "Architecting production-ready AI solutions, machine learning workflows, and intelligent automated systems for enterprise clients.",
       bullets: [
         "Architecting and deploying machine learning pipelines, predictive models, and intelligent AI-driven automations.",
-        "Directing comprehensive social media marketing strategies, paid advertising funnels, and brand scaling initiatives.",
-        "Leveraging data science analytics and audience intelligence to optimize conversion rates and user acquisition.",
-        "Engineering AI integrations to streamline digital operations and deliver high-impact client solutions.",
-        "Partnering with international cross-functional teams to drive technological innovation and digital brand presence.",
+        "Developing scalable AI agent workflows, generative models, and custom data processing algorithms.",
+        "Leveraging data science analytics and statistical modeling to optimize system performance.",
+        "Engineering robust AI integrations and APIs to streamline digital operations and client solutions.",
+        "Partnering with international cross-functional teams to drive technological innovation and reliable software delivery.",
       ],
     },
     {

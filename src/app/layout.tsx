@@ -11,27 +11,27 @@ const fontSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://manshahussain-portfolio.vercel.app"),
-  title: "Mansha Hussain | Full Stack Developer & Data Scientist",
+  title: "Mansha Hussain | Data Scientist & Full Stack Developer",
   description:
-    "Portfolio of Mansha Hussain — Full Stack Developer & Data Scientist specializing in Next.js, React, Node.js, and modern data science & machine learning solutions.",
+    "Portfolio of Mansha Hussain — Data Scientist & Full Stack Developer specializing in modern data science, machine learning solutions, Next.js, React, and Python.",
   keywords: [
     "Mansha Hussain",
-    "Full Stack Developer",
     "Data Scientist",
+    "Full Stack Developer",
     "Data Science",
+    "Machine Learning",
+    "Python",
     "Next.js Developer",
     "React Developer",
-    "MERN Stack",
-    "Machine Learning",
     "Portfolio",
     "Lahore Pakistan",
   ],
   authors: [{ name: "Mansha Hussain" }],
   creator: "Mansha Hussain",
   openGraph: {
-    title: "Mansha Hussain | Full Stack Developer & Data Scientist",
+    title: "Mansha Hussain | Data Scientist & Full Stack Developer",
     description:
-      "I build intelligent, high-performance web applications and data science powered solutions that solve real-world problems and deliver exceptional user experiences.",
+      "I build intelligent machine learning systems, high-performance web applications, and data science powered solutions that solve real-world problems.",
     url: "https://manshahussain-portfolio.vercel.app",
     siteName: "Mansha Hussain Portfolio",
     images: [

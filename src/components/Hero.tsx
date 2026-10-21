@@ -63,11 +63,11 @@ export default function Hero() {
               transition={{ duration: 0.48, ease: [0.22, 1, 0.36, 1], delay: 0.16 }}
               className="text-lg sm:text-2xl font-bold text-slate-800 mb-3.5 flex flex-wrap items-center gap-1.5"
             >
-              <span>Full Stack Developer &amp;</span>
               <span className="text-[#2563EB] font-bold inline-flex items-center gap-1">
                 Data Scientist
                 <Sparkles className="w-4 h-4 text-[#0284C7] inline" />
               </span>
+              <span>&amp; Full Stack Developer</span>
             </motion.h2>
 
             {/* Description */}

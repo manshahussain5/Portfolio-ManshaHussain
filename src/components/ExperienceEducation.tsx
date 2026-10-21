@@ -5,7 +5,6 @@ import {
   Briefcase,
   GraduationCap,
   MapPin,
-  ExternalLink,
   Download,
   BookOpen,
   Layers,
@@ -157,8 +156,8 @@ export default function ExperienceEducation() {
       "AI Engineering",
       "Machine Learning",
       "Python",
-      "Social Media Strategy",
-      "Meta Ads",
+      "Deep Learning",
+      "LLMs & Automation",
     ],
     "exp-2": [
       "Python",
@@ -261,7 +260,9 @@ export default function ExperienceEducation() {
           >
             {experience.map((item, index) => {
               const tags = experienceTags[item.id] || [];
-              const isCurrent = item.period.toLowerCase().includes("present");
+              const isCurrent =
+                item.period.toLowerCase().includes("present") ||
+                item.period.toLowerCase().includes("continue");
               const theme = EXPERIENCE_THEMES[item.id] || DEFAULT_THEME;
 
               return (
@@ -302,10 +303,9 @@ export default function ExperienceEducation() {
                               href={item.companyUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="text-xs sm:text-[13px] font-bold text-slate-900 hover:text-[#2563EB] inline-flex items-center gap-1 transition-colors group/link leading-snug break-words"
+                              className="text-xs sm:text-[13px] font-bold text-slate-900 hover:text-[#2563EB] transition-colors leading-snug block break-words"
                             >
-                              <span>{item.company}</span>
-                              <ExternalLink className="w-3 h-3 text-[#2563EB] opacity-70 group-hover/link:opacity-100 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-all shrink-0" />
+                              {item.company}
                             </a>
                           ) : (
                             <span className="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug block break-words">

@@ -37,12 +37,12 @@ export default function AboutMe() {
           {/* Structured Paragraph Narrative */}
           <div className="space-y-2.5 lg:space-y-3 text-slate-600 text-xs sm:text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-4">
             <p className="text-sm sm:text-base lg:text-[17px] text-slate-800 font-medium leading-relaxed">
-              I’m a <span className="text-[#2563EB] font-bold">Full Stack Developer</span> &amp;{" "}
-              <span className="text-[#2563EB] font-bold">Data Scientist</span> focused on building scalable web applications, intelligent machine learning systems, and data-driven digital products.
+              I’m a <span className="text-[#2563EB] font-bold">Data Scientist</span> &amp;{" "}
+              <span className="text-[#2563EB] font-bold">Full Stack Developer</span> focused on building intelligent machine learning systems, scalable web applications, and data-driven digital products.
             </p>
 
             <p>
-              I specialize in the <span className="font-semibold text-slate-900">MERN stack, Next.js, Python, and Scikit-learn</span>, with experience in machine learning and data analysis. I focus on turning complex data into practical insights and fast, reliable applications.
+              I specialize in <span className="font-semibold text-slate-900">Python, Scikit-learn, and Machine Learning</span>, alongside the <span className="font-semibold text-slate-900">MERN stack and Next.js</span>. I focus on turning complex data into practical insights and fast, reliable applications.
             </p>
 
             <p>
