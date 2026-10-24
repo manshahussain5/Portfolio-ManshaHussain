@@ -127,7 +127,7 @@ export default function AboutMe() {
                 </h3>
                 <p className="text-xs font-semibold text-[#2563EB] mt-0.5 flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-                  Full Stack Engineer &amp; Data Scientist
+                  Data Scientist &amp; Full Stack Developer
                 </p>
               </div>
             </div>

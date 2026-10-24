@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: "/images/mansha_portrait.jpg",
         width: 1200,
         height: 1200,
-        alt: "Mansha Hussain - Full Stack Developer & Data Scientist",
+        alt: "Mansha Hussain - Data Scientist & Full Stack Developer",
       },
     ],
     locale: "en_US",
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mansha Hussain | Full Stack Developer & Data Scientist",
+    title: "Mansha Hussain | Data Scientist & Full Stack Developer",
     description:
-      "Full Stack Developer & Data Scientist building scalable web apps and data-driven systems.",
+      "Data Scientist & Full Stack Developer building intelligent ML systems, scalable web apps, and data-driven solutions.",
     images: ["/images/mansha_portrait.jpg"],
   },
   icons: {
@@ -79,11 +79,28 @@ const jsonLd = {
       "@id": "https://manshahussain-portfolio.vercel.app/#person",
       name: "Mansha Hussain",
       url: "https://manshahussain-portfolio.vercel.app",
-      jobTitle: "Full Stack Developer & Data Scientist",
+      jobTitle: "Data Scientist & Full Stack Developer",
       image: "https://manshahussain-portfolio.vercel.app/images/mansha_portrait.jpg",
       sameAs: [
         "https://github.com/manshahussain5",
         "https://www.linkedin.com/in/manshahussain5/",
+      ],
+      alumniOf: {
+        "@type": "EducationalOrganization",
+        name: "Minhaj University - Lahore",
+      },
+      knowsAbout: [
+        "Data Science",
+        "Machine Learning",
+        "Artificial Intelligence",
+        "Python",
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Deep Learning",
+        "Google Ads",
+        "Meta Ads",
       ],
       address: {
         "@type": "PostalAddress",
@@ -96,6 +113,8 @@ const jsonLd = {
       "@id": "https://manshahussain-portfolio.vercel.app/#website",
       url: "https://manshahussain-portfolio.vercel.app",
       name: "Mansha Hussain Portfolio",
+      description:
+        "Portfolio of Mansha Hussain — Data Scientist & Full Stack Developer specializing in modern data science, machine learning solutions, Next.js, React, and Python.",
       publisher: {
         "@id": "https://manshahussain-portfolio.vercel.app/#person",
       },

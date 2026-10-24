@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react";
-import { LinkedinIcon } from "@/components/Icons";
 import { portfolioData } from "@/data/portfolioData";
 import AnimatedHeading from "@/components/AnimatedHeading";
 
@@ -79,18 +78,6 @@ export default function Testimonials() {
                   </p>
                 </div>
               </div>
-
-              {test.linkedinUrl && (
-                <a
-                  href={test.linkedinUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-xl bg-slate-50 hover:bg-blue-50 text-slate-500 hover:text-[#2563EB] transition-colors"
-                  aria-label={`${test.name}'s LinkedIn`}
-                >
-                  <LinkedinIcon className="w-4 h-4" />
-                </a>
-              )}
             </div>
           </div>
         ))}

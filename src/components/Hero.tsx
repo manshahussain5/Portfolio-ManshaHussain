@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { ArrowRight, MessageSquare, Mail, Sparkles, Award } from "lucide-react";
+import { ArrowRight, MessageSquare, Sparkles, Award } from "lucide-react";
 import { GithubIcon, LinkedinIcon, GmailIcon, WhatsAppIcon } from "@/components/Icons";
 import { portfolioData } from "@/data/portfolioData";
 import { motion } from "framer-motion";
@@ -175,7 +175,7 @@ export default function Hero() {
               <div className="relative w-[270px] xs:w-[290px] sm:w-[350px] lg:w-[360px] h-[320px] xs:h-[350px] sm:h-[400px] lg:h-[410px] rounded-3xl overflow-hidden border-2 border-white bg-white shadow-[0_20px_50px_rgba(37,99,235,0.12),0_4px_16px_rgba(0,0,0,0.04)] group">
                 <Image
                   src="/images/mansha_studio_v2.jpg"
-                  alt="Mansha Hussain - Full Stack Developer & Data Scientist"
+                  alt="Mansha Hussain - Data Scientist & Full Stack Developer"
                   fill
                   priority
                   className="object-cover object-top transition-transform duration-700 group-hover:scale-105 z-0"

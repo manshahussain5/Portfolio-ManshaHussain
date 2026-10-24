@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle2, Clock, AlertCircle, Loader2 } from "lucide-react";
+import { MapPin, Send, CheckCircle2, Clock, AlertCircle, Loader2 } from "lucide-react";
 import { GmailIcon, WhatsAppIcon } from "@/components/Icons";
 import { portfolioData } from "@/data/portfolioData";
 import AnimatedHeading from "@/components/AnimatedHeading";

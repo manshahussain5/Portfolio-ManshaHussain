@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useSyncExternalStore } from "react";
+import React from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import StatsBar from "@/components/StatsBar";
@@ -13,21 +13,7 @@ import Testimonials from "@/components/Testimonials";
 import ContactCTA from "@/components/ContactCTA";
 import Footer from "@/components/Footer";
 
-const emptySubscribe = () => () => {};
-
 export default function PortfolioContent() {
-  const mounted = useSyncExternalStore(
-    emptySubscribe,
-    () => true,
-    () => false
-  );
-
-  if (!mounted) {
-    return (
-      <div suppressHydrationWarning className="min-h-screen bg-[#F8FAFC]" />
-    );
-  }
-
   return (
     <main suppressHydrationWarning className="min-h-screen bg-[#F8FAFC] text-slate-800 flex flex-col selection:bg-[#2563EB] selection:text-white relative overflow-hidden">
       {/* Fixed Sticky Header */}

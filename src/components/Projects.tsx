@@ -135,7 +135,7 @@ export default function Projects() {
             isDown ? "cursor-grabbing" : "cursor-grab"
           }`}
         >
-          {portfolioData.projects.map((project) => {
+          {portfolioData.projects.map((project, idx) => {
             const bgColor = projectBgMap[project.id] || "#A7A8AD";
             const projectUrl = project.liveUrl || project.githubUrl;
 
@@ -162,6 +162,7 @@ export default function Projects() {
                     src={project.image}
                     alt={`Screenshot and preview of ${project.title}`}
                     fill
+                    loading={idx < 2 ? "eager" : "lazy"}
                     className="object-contain object-center"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     draggable={false}

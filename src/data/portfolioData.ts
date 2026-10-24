@@ -312,7 +312,6 @@ export const portfolioData = {
       id: "test-1",
       name: "Dr. Shahbaz ul Hasan",
       role: "Assistant Professor & Researcher",
-      linkedinUrl: "https://www.linkedin.com/in/shahbaz-ul-hasan/",
       avatar: "/images/SHAHBAZ.png",
       content:
         "Exceptional at translating user stories into scalable, efficient, and user-centric solutions. Demonstrates a deep understanding of client needs and consistently delivers innovative, high-quality applications that exceed expectations.",
@@ -322,7 +321,6 @@ export const portfolioData = {
       id: "test-2",
       name: "Kanwar Saad Bin Liaqat",
       role: "Senior Software Architect",
-      linkedinUrl: "https://www.linkedin.com/in/kanwar-saad-bin-liaqat/",
       avatar: "/images/Saad.png",
       content:
         "A versatile full-stack developer with a strong command of both backend and frontend technologies. Combines robust server-side logic with intuitive, responsive user interfaces to create cohesive and high-performing web applications.",
@@ -332,7 +330,6 @@ export const portfolioData = {
       id: "test-3",
       name: "Abdul Rehman",
       role: "Lead Project Manager",
-      linkedinUrl: "https://www.linkedin.com/in/abdul-rehman/",
       avatar: "/images/ABD.png",
       content:
         "Reliably delivers projects on time, ensuring seamless communication and alignment with client goals. Known for maintaining high client satisfaction through meticulous attention to detail, proactive problem-solving, and a commitment to excellence.",
