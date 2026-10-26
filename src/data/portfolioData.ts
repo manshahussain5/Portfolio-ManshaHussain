@@ -28,6 +28,7 @@ export interface ExperienceItem {
   period: string;
   description: string;
   bullets: string[];
+  skills?: string[];
 }
 
 export interface EducationItem {
@@ -37,6 +38,18 @@ export interface EducationItem {
   period: string;
   description: string;
   grade?: string;
+}
+
+export interface CertificationItem {
+  id: string;
+  title: string;
+  issuer: string;
+  organization: string;
+  period: string;
+  credentialId?: string;
+  verificationUrl?: string;
+  grade?: string;
+  skills: string[];
 }
 
 export interface Testimonial {
@@ -71,6 +84,7 @@ export const portfolioData = {
     bio: [
       "Software Engineering graduate specializing in Full stack Web Development, Shopify stores, and AI-powered solutions.",
       "I build responsive, scalable, and user-focused digital products combining strong engineering principles with modern web and artificial intelligence expertise.",
+      "My technical expertise is backed by industry certifications including Certiport JavaScript Specialist, NAVTTC Full-Stack (MERN), DigiSkills Python & AI, and IELTS Academic (CEFR B2) for global professional communication.",
       "I also have experience with Google Ads and Meta Ads, allowing me to understand both the technical and business sides of digital products."
     ],
     email: "manshahussain520@gmail.com",
@@ -254,6 +268,12 @@ export const portfolioData = {
       period: "Sep 2025 — Aug 2026",
       description:
         "Engineered full-stack software applications, scalable web platforms, and automated system workflows with robust database architectures.",
+      skills: [
+        "Full-Stack Web & Software Engineering",
+        "Scalable Backend Architecture & REST APIs",
+        "Database Modeling, PostgreSQL & MongoDB",
+        "System Integration & Performance Optimization",
+      ],
       bullets: [
         "Developing and maintaining responsive web applications and scalable software systems.",
         "Architecting robust RESTful APIs, backend services, and database schemas.",
@@ -270,6 +290,12 @@ export const portfolioData = {
       period: "Jan 2025 — Mar 2025",
       description:
         "Developed full-stack web applications utilizing MongoDB, Express.js, React.js, and Node.js with responsive frontends and secure REST APIs.",
+      skills: [
+        "MERN Stack & React.js Web Development",
+        "Node.js & Express Server-Side Logic",
+        "MongoDB Database Design & Optimization",
+        "RESTful API Integration & Modern UI Styling",
+      ],
       bullets: [
         "Building interactive, dynamic user interfaces using React.js and modern TailwindCSS.",
         "Developing secure server-side logic and RESTful endpoints using Node.js and Express.js.",
@@ -286,6 +312,12 @@ export const portfolioData = {
       period: "Jan 2023 — Oct 2023",
       description:
         "Managed comprehensive social media marketing campaigns, content strategies, and targeted Meta advertising to maximize reach and conversion.",
+      skills: [
+        "Strategic Social Media & Brand Campaigns",
+        "Targeted Meta Ads (Facebook & Instagram)",
+        "Audience Targeting & Conversion Tracking",
+        "Campaign Analytics & ROI Optimization",
+      ],
       bullets: [
         "Planned and executed end-to-end social media growth and digital marketing strategies.",
         "Managed high-converting Meta Ads, ad copy, creative assets, and campaign budgeting.",
@@ -306,6 +338,69 @@ export const portfolioData = {
       grade: "Graduated with Distinction",
     },
   ] as EducationItem[],
+  certifications: [
+    {
+      id: "cert-1",
+      title: "JavaScript Specialist",
+      issuer: "Certiport",
+      organization: "Pearson VUE & CertNexus",
+      period: "Oct 2026",
+      credentialId: "aAXk-s4qR",
+      verificationUrl: "https://verify.certiport.com",
+      skills: [
+        "Modern ES6+ JavaScript",
+        "DOM & Event Handling",
+        "Object-Oriented JS (OOP)",
+        "Web APIs & Standards",
+      ],
+    },
+    {
+      id: "cert-2",
+      title: "JavaScript Full-Stack (MERN)",
+      issuer: "NAVTTC",
+      organization: "Govt. of Pakistan",
+      period: "Jan 2026",
+      credentialId: "P-25-1083899",
+      grade: "Grade A+",
+      skills: [
+        "React.js SPA Architecture",
+        "Node.js & Express REST APIs",
+        "MongoDB Database Design",
+        "Full-Stack State & Auth",
+      ],
+    },
+    {
+      id: "cert-3",
+      title: "AI Using Python",
+      issuer: "DigiSkills",
+      organization: "Ignite & Virtual University",
+      period: "Jul 2026",
+      credentialId: "P7X2DYMMK",
+      verificationUrl: "https://digiskills.pk/verify",
+      skills: [
+        "Python Core Programming",
+        "Machine Learning Models",
+        "Data Preprocessing",
+        "Intelligent Automation",
+      ],
+    },
+    {
+      id: "cert-4",
+      title: "IELTS Academic English",
+      issuer: "British Council",
+      organization: "Cambridge & IDP IELTS",
+      period: "Feb 2026",
+      credentialId: "25PK521322HUSM011A",
+      grade: "Band 6.0 (CEFR B2)",
+      verificationUrl: "https://ielts.org/verify",
+      skills: [
+        "CEFR B2 Certified Fluency",
+        "Academic Technical Writing",
+        "Analytical Reading",
+        "Global Communication",
+      ],
+    },
+  ] as CertificationItem[],
   testimonials: [
     {
       id: "test-1",

@@ -373,7 +373,7 @@ function MarqueeRow({
   const duration = Math.round(padded.length * speedPerItem);
 
   return (
-    <div className="relative w-full overflow-visible py-3 sm:py-4">
+    <div className="relative w-full overflow-visible py-1.5 sm:py-2">
       <div
         className="animate-marquee-ltr pause-on-hover flex items-center gap-4 sm:gap-6"
         style={{ animationDuration: `${duration}s` }}
@@ -398,7 +398,7 @@ export default function TechStack() {
   );
 
   return (
-    <section id="skills" className="relative scroll-mt-[70px] pt-16 pb-10 lg:py-4 xl:py-6 lg:min-h-[calc(100dvh-70px)] lg:flex lg:flex-col lg:justify-center w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+    <section id="skills" className="relative scroll-mt-[70px] pt-20 sm:pt-24 lg:pt-12 xl:pt-14 pb-10 lg:pb-8 xl:pb-10 lg:min-h-[calc(100dvh-70px)] lg:flex lg:flex-col lg:justify-center w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
       {/* Section Header */}
       <AnimatedHeading
         title="Technical Skills"
@@ -407,14 +407,14 @@ export default function TechStack() {
       />
 
       {/* Floating Running Stream - Directly on the Page Background */}
-      <div className="relative w-full overflow-x-clip overflow-y-visible py-6 sm:py-8">
+      <div className="relative w-full overflow-x-clip overflow-y-visible py-2 sm:py-3">
         
         {/* Left & Right Edge Dissolves blending seamlessly with page background #F8FAFC */}
         <div className="pointer-events-none absolute inset-y-0 left-0 w-8 xs:w-14 sm:w-28 md:w-36 bg-gradient-to-r from-[#F8FAFC] via-[#F8FAFC]/80 to-transparent z-10" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-8 xs:w-14 sm:w-28 md:w-36 bg-gradient-to-l from-[#F8FAFC] via-[#F8FAFC]/80 to-transparent z-10" />
 
         {/* Running Floating Rows - Synchronized Pace */}
-        <div className="space-y-4 sm:space-y-6">
+        <div className="space-y-1 sm:space-y-2">
           {/* Row 1: Data Science Step-by-Step */}
           <MarqueeRow items={dataScienceSkills} />
 

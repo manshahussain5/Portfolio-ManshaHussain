@@ -7,6 +7,7 @@ import {
   Copy,
   Check,
   ShieldCheck,
+  Award,
 } from "lucide-react";
 import { GmailIcon } from "@/components/Icons";
 import { portfolioData } from "@/data/portfolioData";
@@ -20,6 +21,19 @@ export default function AboutMe() {
     navigator.clipboard.writeText(p.email);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const openCertificationsTab = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.dispatchEvent(
+      new CustomEvent("set-experience-tab", { detail: "certifications" })
+    );
+    const elem = document.getElementById("experience");
+    if (elem) {
+      elem.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.hash = "#experience";
+    }
   };
 
   return (
@@ -37,7 +51,7 @@ export default function AboutMe() {
           {/* Structured Paragraph Narrative */}
           <div className="space-y-2.5 lg:space-y-3 text-slate-600 text-xs sm:text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-4">
             <p className="text-sm sm:text-base lg:text-[17px] text-slate-800 font-medium leading-relaxed">
-              Software Engineering graduate specializing in <span className="text-[#2563EB] font-bold">Full stack Web Development</span>, <span className="text-[#2563EB] font-bold">Shopify stores</span>, and <span className="text-[#2563EB] font-bold">AI-powered solutions</span>.
+              Software Engineering graduate specializing in <span className="font-bold text-emerald-700">Full stack Web Development</span>, <span className="font-bold text-emerald-700">Shopify stores</span>, and <span className="font-bold text-emerald-700">AI-powered solutions</span>.
             </p>
 
             <p>
@@ -47,6 +61,54 @@ export default function AboutMe() {
             <p>
               I also have experience with <span className="font-bold text-emerald-700">Google Ads and Meta Ads</span>, allowing me to understand both the technical and business sides of digital products.
             </p>
+
+            <div className="space-y-2 pt-0.5">
+              <p>
+                My practical engineering is backed by verified certifications across web systems, artificial intelligence, and global professional communication:
+              </p>
+              {/* 4 Sleek Micro-Badges - Clickable to open Certifications tab */}
+              <div className="flex flex-wrap items-center gap-2 pt-0.5">
+                <a
+                  href="#experience"
+                  onClick={openCertificationsTab}
+                  title="View Certiport JavaScript Certification"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-amber-50/90 hover:bg-amber-100 border border-amber-200/80 hover:border-amber-400 text-amber-900 text-xs font-semibold shadow-2xs hover:shadow-xs hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
+                >
+                  <Award className="w-3.5 h-3.5 text-amber-600" />
+                  <span>Certiport JS</span>
+                </a>
+
+                <a
+                  href="#experience"
+                  onClick={openCertificationsTab}
+                  title="View NAVTTC MERN Stack Certification"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-50/90 hover:bg-emerald-100 border border-emerald-200/80 hover:border-emerald-400 text-emerald-900 text-xs font-semibold shadow-2xs hover:shadow-xs hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
+                >
+                  <Award className="w-3.5 h-3.5 text-emerald-600" />
+                  <span>NAVTTC MERN (A+)</span>
+                </a>
+
+                <a
+                  href="#experience"
+                  onClick={openCertificationsTab}
+                  title="View Python AI Certification"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-indigo-50/90 hover:bg-indigo-100 border border-indigo-200/80 hover:border-indigo-400 text-indigo-900 text-xs font-semibold shadow-2xs hover:shadow-xs hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
+                >
+                  <Award className="w-3.5 h-3.5 text-indigo-600" />
+                  <span>Python AI</span>
+                </a>
+
+                <a
+                  href="#experience"
+                  onClick={openCertificationsTab}
+                  title="View IELTS Academic Certification"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-rose-50/90 hover:bg-rose-100 border border-rose-200/80 hover:border-rose-400 text-rose-900 text-xs font-semibold shadow-2xs hover:shadow-xs hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
+                >
+                  <Award className="w-3.5 h-3.5 text-rose-600" />
+                  <span>IELTS (B2)</span>
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Stylized Handwritten SVG Signature */}
