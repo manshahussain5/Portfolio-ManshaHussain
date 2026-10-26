@@ -33,7 +33,7 @@ interface ExperienceTheme {
 
 const EXPERIENCE_THEMES: Record<string, ExperienceTheme> = {
   "exp-1": {
-    initials: "NS",
+    initials: "QI",
     badgeBg: "bg-gradient-to-br from-blue-600 via-indigo-600 to-blue-700 text-white shadow-[0_3px_10px_rgba(37,99,235,0.3)]",
     accentGradient: "from-blue-600 via-indigo-600 to-cyan-400",
     glowAura: "from-blue-500/15 via-indigo-500/5 to-transparent",
@@ -44,15 +44,15 @@ const EXPERIENCE_THEMES: Record<string, ExperienceTheme> = {
     cardHoverBg: "hover:bg-gradient-to-b hover:from-white hover:via-blue-50/10 hover:to-white",
   },
   "exp-2": {
-    initials: "QI",
-    badgeBg: "bg-gradient-to-br from-indigo-600 via-blue-600 to-cyan-500 text-white shadow-[0_3px_10px_rgba(99,102,241,0.3)]",
-    accentGradient: "from-indigo-600 via-blue-600 to-cyan-400",
-    glowAura: "from-indigo-500/15 via-cyan-500/5 to-transparent",
-    cardBorder: "border border-slate-200/90 shadow-[0_6px_22px_rgba(99,102,241,0.07),0_1px_3px_rgba(0,0,0,0.03)]",
-    borderHover: "hover:border-indigo-300 hover:shadow-[0_12px_32px_rgba(99,102,241,0.15)]",
-    tagStyle: "bg-indigo-50/80 text-indigo-700 border border-indigo-200/60",
-    tagHover: "hover:bg-indigo-600 hover:text-white hover:border-indigo-600",
-    cardHoverBg: "hover:bg-gradient-to-b hover:from-white hover:via-indigo-50/10 hover:to-white",
+    initials: "AL",
+    badgeBg: "bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 text-white shadow-[0_3px_10px_rgba(16,185,129,0.3)]",
+    accentGradient: "from-emerald-500 via-teal-600 to-cyan-400",
+    glowAura: "from-emerald-500/15 via-teal-500/5 to-transparent",
+    cardBorder: "border border-slate-200/90 shadow-[0_6px_22px_rgba(16,185,129,0.07),0_1px_3px_rgba(0,0,0,0.03)]",
+    borderHover: "hover:border-emerald-300 hover:shadow-[0_12px_32px_rgba(16,185,129,0.15)]",
+    tagStyle: "bg-emerald-50/80 text-emerald-700 border border-emerald-200/60",
+    tagHover: "hover:bg-emerald-600 hover:text-white hover:border-emerald-600",
+    cardHoverBg: "hover:bg-gradient-to-b hover:from-white hover:via-emerald-50/10 hover:to-white",
   },
   "exp-3": {
     initials: "FT",
@@ -153,19 +153,18 @@ export default function ExperienceEducation() {
 
   const experienceTags: Record<string, string[]> = {
     "exp-1": [
-      "AI Engineering",
-      "Machine Learning",
-      "Python",
-      "Deep Learning",
-      "LLMs & Automation",
+      "Software Engineering",
+      "Full-Stack",
+      "Web Platforms",
+      "REST APIs",
+      "Database Design",
     ],
     "exp-2": [
-      "Python",
-      "Machine Learning",
-      "Data Science",
-      "AI Automation",
-      "Deep Learning",
-      "APIs",
+      "MERN Stack",
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
     ],
     "exp-3": [
       "Social Media",

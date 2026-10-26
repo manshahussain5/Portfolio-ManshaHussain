@@ -33,7 +33,7 @@ export default function Footer() {
             </div>
             <div>
               <span className="font-bold text-slate-900 text-base">Mansha Hussain</span>
-              <p className="text-[11px] font-semibold text-slate-600">Data Scientist &amp; Full Stack Developer</p>
+              <p className="text-[11px] font-semibold text-slate-600">Software Engineer &amp; Full-Stack Developer</p>
             </div>
           </div>
 

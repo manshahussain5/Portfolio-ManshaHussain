@@ -1,15 +1,15 @@
 # Mansha Hussain - Portfolio
 
-> Data Scientist & Full Stack Developer specializing in Python, Machine Learning, Next.js, React, and Node.js.
+> Software Engineer & Full-Stack Developer specializing in Full stack Web Development, Shopify stores, and AI solutions.
 
 ## About
-Mansha Hussain is a seasoned Data Scientist & Full Stack Developer based in Lahore, Pakistan. He designs and implements modern web applications, scalable APIs, and intelligent data systems.
+Mansha Hussain is a Software Engineering graduate and Full-Stack Developer based in Lahore, Pakistan. He builds responsive, scalable, and user-focused digital products by combining strong software engineering principles with practical expertise in web technologies and artificial intelligence.
 
 ## Primary Skills
 - Frontend: Next.js, React, TypeScript, Tailwind CSS, Framer Motion
 - Backend: Node.js, Express, Python, FastAPI, RESTful APIs
-- Data Science & ML: Python, Scikit-learn, Pandas, NumPy, Machine Learning
-- Databases: MongoDB, PostgreSQL, MySQL
+- Data Science & ML: Python, Scikit-learn, Machine Learning, Deep Learning, NLP
+- Databases: MongoDB, PostgreSQL, Firebase, SQLite, MySQL
 
 ## Contact & Links
 - Website: https://manshahussain-portfolio.vercel.app

@@ -25,6 +25,16 @@ const SERVICE_THEMES: Record<string, ServiceTheme> = {
     borderHover: "hover:border-blue-400/60",
     shadowHover: "hover:shadow-[0_22px_45px_-12px_rgba(37,99,235,0.18)]",
   },
+  "ai-solutions": {
+    color: "group-hover:text-purple-600",
+    topGradient: "from-purple-500 via-fuchsia-500 to-pink-500",
+    bgAura: "from-purple-500/10 via-fuchsia-500/5 to-transparent",
+    tagStyle:
+      "bg-purple-50/80 text-purple-900 border-purple-200/60 hover:bg-purple-100/90 hover:border-purple-300",
+    tagDot: "bg-purple-500",
+    borderHover: "hover:border-purple-400/60",
+    shadowHover: "hover:shadow-[0_22px_45px_-12px_rgba(168,85,247,0.18)]",
+  },
   "data-science": {
     color: "group-hover:text-purple-600",
     topGradient: "from-purple-500 via-fuchsia-500 to-pink-500",
@@ -34,6 +44,16 @@ const SERVICE_THEMES: Record<string, ServiceTheme> = {
     tagDot: "bg-purple-500",
     borderHover: "hover:border-purple-400/60",
     shadowHover: "hover:shadow-[0_22px_45px_-12px_rgba(168,85,247,0.18)]",
+  },
+  "google-meta-ads": {
+    color: "group-hover:text-rose-600",
+    topGradient: "from-rose-500 via-pink-500 to-purple-500",
+    bgAura: "from-rose-500/10 via-pink-500/5 to-transparent",
+    tagStyle:
+      "bg-rose-50/80 text-rose-900 border-rose-200/60 hover:bg-rose-100/90 hover:border-rose-300",
+    tagDot: "bg-rose-500",
+    borderHover: "hover:border-rose-400/60",
+    shadowHover: "hover:shadow-[0_22px_45px_-12px_rgba(244,63,94,0.18)]",
   },
   "performance-marketing": {
     color: "group-hover:text-rose-600",
@@ -99,25 +119,26 @@ export default function Services() {
               <div>
                 {/* Title & Description */}
                 <h3
-                  className={`text-base sm:text-lg lg:text-[17px] xl:text-[18px] font-bold text-slate-900 tracking-tight mb-2 break-words xl:whitespace-nowrap ${theme.color} transition-colors duration-200`}
+                  className={`text-base sm:text-lg lg:text-[17px] xl:text-[18px] font-bold text-slate-900 tracking-tight leading-snug mb-2 min-h-[2.75rem] lg:min-h-[3rem] flex items-center ${theme.color} transition-colors duration-200`}
                 >
                   {service.title}
                 </h3>
-                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4 lg:mb-5">
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4 lg:mb-5 min-h-[3.75rem] lg:min-h-[4rem]">
                   {service.description}
                 </p>
               </div>
 
-              {/* Feature Tags with custom colored dots */}
-              <div className="pt-3.5 border-t border-slate-100 flex flex-wrap items-center gap-1.5">
+              {/* Feature Tags with custom colored dots - Exactly 4 stacked lines */}
+              <div className="space-y-2 pt-1">
                 {service.features.map((feat) => (
-                  <span
-                    key={feat}
-                    className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-medium border transition-colors duration-200 ${theme.tagStyle}`}
-                  >
-                    <span className={`w-1.5 h-1.5 rounded-full ${theme.tagDot} shrink-0 opacity-80`} />
-                    <span>{feat}</span>
-                  </span>
+                  <div key={feat}>
+                    <span
+                      className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium border transition-colors duration-200 ${theme.tagStyle}`}
+                    >
+                      <span className={`w-1.5 h-1.5 rounded-full ${theme.tagDot} shrink-0 opacity-80`} />
+                      <span>{feat}</span>
+                    </span>
+                  </div>
                 ))}
               </div>
             </div>

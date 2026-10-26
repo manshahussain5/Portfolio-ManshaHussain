@@ -63,9 +63,9 @@ export default function Hero() {
               transition={{ duration: 0.48, ease: [0.22, 1, 0.36, 1], delay: 0.16 }}
               className="text-lg sm:text-2xl font-bold text-slate-800 mb-3.5 flex flex-wrap items-center gap-1.5"
             >
-              <span>Data Scientist &amp;</span>
+              <span>Software Engineer &amp; </span>
               <span className="text-[#2563EB] font-bold inline-flex items-center gap-1">
-                Full Stack Developer
+                Full-Stack Developer
                 <Sparkles className="w-4 h-4 text-[#0284C7] inline" />
               </span>
             </motion.h2>
@@ -175,7 +175,7 @@ export default function Hero() {
               <div className="relative w-[270px] xs:w-[290px] sm:w-[350px] lg:w-[360px] h-[320px] xs:h-[350px] sm:h-[400px] lg:h-[410px] rounded-3xl overflow-hidden border-2 border-white bg-white shadow-[0_20px_50px_rgba(37,99,235,0.12),0_4px_16px_rgba(0,0,0,0.04)] group">
                 <Image
                   src="/images/mansha_studio_v2.jpg"
-                  alt="Mansha Hussain - Data Scientist & Full Stack Developer"
+                  alt="Mansha Hussain - Software Engineer & Full-Stack Developer"
                   fill
                   priority
                   className="object-cover object-top transition-transform duration-700 group-hover:scale-105 z-0"

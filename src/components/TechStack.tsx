@@ -96,6 +96,42 @@ const TechIcon = ({ icon }: { icon: string; name: string }) => {
           </svg>
         </div>
       );
+    case "firebase":
+      return (
+        <div className="w-11 h-11 flex items-center justify-center">
+          <svg className="w-9 h-9" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M4.66 17.58L6.44 6.55a.62.62 0 0 1 1.15-.17l2.87 5.43L4.66 17.58z"
+              fill="#FFA000"
+            />
+            <path
+              d="M14.61 9.38l-2.47-4.7a.62.62 0 0 0-1.12 0L4.66 17.58l9.95-8.2z"
+              fill="#F57C00"
+            />
+            <path
+              d="M19.34 17.58L17.15 4.3a.62.62 0 0 0-1.12-.27l-5.57 10.6 8.88 2.95z"
+              fill="#FFCA28"
+            />
+            <path
+              d="M19.34 17.58L14.6 9.38 4.66 17.58l6.73 3.77a1.5 1.5 0 0 0 1.45 0l6.5-3.77z"
+              fill="#FFA000"
+            />
+          </svg>
+        </div>
+      );
+    case "sqlite":
+      return (
+        <div className="w-11 h-11 flex items-center justify-center">
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#003B57] to-[#005B82] flex flex-col items-center justify-center shadow-[0_2px_8px_rgba(0,59,87,0.3)] border border-[#00A4D6]/30">
+            <span className="font-mono font-black text-white text-[10px] tracking-tight leading-tight">
+              SQL
+            </span>
+            <span className="text-[#00C0F3] font-bold text-[8px] tracking-wider leading-none">
+              ite
+            </span>
+          </div>
+        </div>
+      );
     case "tailwind":
       return (
         <div className="w-11 h-11 flex items-center justify-center">
@@ -288,9 +324,9 @@ const TechIcon = ({ icon }: { icon: string; name: string }) => {
 
 function FloatingSkill({ skill }: { skill: SkillItem }) {
   return (
-    <div className="group/skill flex flex-col items-center text-center cursor-pointer w-[84px] sm:w-[98px] shrink-0 select-none py-1 transition-transform duration-300 hover:scale-115">
+    <div className="group/skill relative flex flex-col items-center text-center cursor-pointer w-[84px] sm:w-[98px] shrink-0 select-none pt-4 pb-2 transition-all duration-300 hover:scale-110 hover:z-20">
       {/* Brand Logo / Icon */}
-      <div className="h-11 flex items-center justify-center mb-1.5 transition-transform duration-300 group-hover/skill:scale-115 group-hover/skill:-translate-y-1">
+      <div className="h-11 flex items-center justify-center mb-1.5 transition-transform duration-300 group-hover/skill:-translate-y-1">
         <TechIcon icon={skill.icon} name={skill.name} />
       </div>
 
@@ -337,7 +373,7 @@ function MarqueeRow({
   const duration = Math.round(padded.length * speedPerItem);
 
   return (
-    <div className="relative w-full overflow-hidden py-1.5">
+    <div className="relative w-full overflow-visible py-3 sm:py-4">
       <div
         className="animate-marquee-ltr pause-on-hover flex items-center gap-4 sm:gap-6"
         style={{ animationDuration: `${duration}s` }}
@@ -371,14 +407,14 @@ export default function TechStack() {
       />
 
       {/* Floating Running Stream - Directly on the Page Background */}
-      <div className="relative w-full overflow-hidden py-4">
+      <div className="relative w-full overflow-x-clip overflow-y-visible py-6 sm:py-8">
         
         {/* Left & Right Edge Dissolves blending seamlessly with page background #F8FAFC */}
         <div className="pointer-events-none absolute inset-y-0 left-0 w-8 xs:w-14 sm:w-28 md:w-36 bg-gradient-to-r from-[#F8FAFC] via-[#F8FAFC]/80 to-transparent z-10" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-8 xs:w-14 sm:w-28 md:w-36 bg-gradient-to-l from-[#F8FAFC] via-[#F8FAFC]/80 to-transparent z-10" />
 
         {/* Running Floating Rows - Synchronized Pace */}
-        <div className="space-y-3 sm:space-y-4 lg:space-y-5">
+        <div className="space-y-4 sm:space-y-6">
           {/* Row 1: Data Science Step-by-Step */}
           <MarqueeRow items={dataScienceSkills} />
 

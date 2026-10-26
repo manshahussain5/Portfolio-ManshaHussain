@@ -37,12 +37,11 @@ export default function AboutMe() {
           {/* Structured Paragraph Narrative */}
           <div className="space-y-2.5 lg:space-y-3 text-slate-600 text-xs sm:text-sm lg:text-[15px] leading-relaxed mb-3 lg:mb-4">
             <p className="text-sm sm:text-base lg:text-[17px] text-slate-800 font-medium leading-relaxed">
-              I’m a <span className="text-[#2563EB] font-bold">Data Scientist</span> &amp;{" "}
-              <span className="text-[#2563EB] font-bold">Full Stack Developer</span> focused on building intelligent machine learning systems, scalable web applications, and data-driven digital products.
+              Software Engineering graduate specializing in <span className="text-[#2563EB] font-bold">Full stack Web Development</span>, <span className="text-[#2563EB] font-bold">Shopify stores</span>, and <span className="text-[#2563EB] font-bold">AI-powered solutions</span>.
             </p>
 
             <p>
-              I specialize in <span className="font-semibold text-slate-900">Python, Scikit-learn, and Machine Learning</span>, alongside the <span className="font-semibold text-slate-900">MERN stack and Next.js</span>. I focus on turning complex data into practical insights and fast, reliable applications.
+              I build responsive, scalable, and user-focused digital products by combining strong software engineering principles with practical expertise in web technologies and artificial intelligence.
             </p>
 
             <p>
@@ -127,7 +126,7 @@ export default function AboutMe() {
                 </h3>
                 <p className="text-xs font-semibold text-[#2563EB] mt-0.5 flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-                  Data Scientist &amp; Full Stack Developer
+                  Software Engineer &amp; Full-Stack Developer
                 </p>
               </div>
             </div>

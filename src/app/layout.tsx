@@ -11,27 +11,28 @@ const fontSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://manshahussain-portfolio.vercel.app"),
-  title: "Mansha Hussain | Data Scientist & Full Stack Developer",
+  title: "Mansha Hussain | Software Engineer & Full-Stack Developer",
   description:
-    "Portfolio of Mansha Hussain — Data Scientist & Full Stack Developer specializing in modern data science, machine learning solutions, Next.js, React, and Python.",
+    "Software Engineering graduate specializing in Full stack Web Development, Shopify stores, and AI solutions. Building responsive, scalable, and user-focused digital products.",
   keywords: [
     "Mansha Hussain",
-    "Data Scientist",
-    "Full Stack Developer",
-    "Data Science",
-    "Machine Learning",
-    "Python",
+    "Software Engineer",
+    "Full-Stack Developer",
+    "Full Stack Web Developer",
+    "Shopify Developer",
+    "Web Development",
     "Next.js Developer",
     "React Developer",
+    "AI-powered solutions",
     "Portfolio",
     "Lahore Pakistan",
   ],
   authors: [{ name: "Mansha Hussain" }],
   creator: "Mansha Hussain",
   openGraph: {
-    title: "Mansha Hussain | Data Scientist & Full Stack Developer",
+    title: "Mansha Hussain | Software Engineer & Full-Stack Developer",
     description:
-      "I build intelligent machine learning systems, high-performance web applications, and data science powered solutions that solve real-world problems.",
+      "Software Engineering graduate specializing in Full stack Web Development, Shopify stores, and AI solutions. I build responsive, scalable, and user-focused digital products.",
     url: "https://manshahussain-portfolio.vercel.app",
     siteName: "Mansha Hussain Portfolio",
     images: [
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
         url: "/images/mansha_portrait.jpg",
         width: 1200,
         height: 1200,
-        alt: "Mansha Hussain - Data Scientist & Full Stack Developer",
+        alt: "Mansha Hussain - Software Engineer & Full-Stack Developer",
       },
     ],
     locale: "en_US",
@@ -47,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mansha Hussain | Data Scientist & Full Stack Developer",
+    title: "Mansha Hussain | Software Engineer & Full-Stack Developer",
     description:
-      "Data Scientist & Full Stack Developer building intelligent ML systems, scalable web apps, and data-driven solutions.",
+      "Software Engineering graduate specializing in Full stack Web Development, Shopify stores, and AI solutions.",
     images: ["/images/mansha_portrait.jpg"],
   },
   icons: {
@@ -79,7 +80,7 @@ const jsonLd = {
       "@id": "https://manshahussain-portfolio.vercel.app/#person",
       name: "Mansha Hussain",
       url: "https://manshahussain-portfolio.vercel.app",
-      jobTitle: "Data Scientist & Full Stack Developer",
+      jobTitle: "Software Engineer & Full-Stack Developer",
       image: "https://manshahussain-portfolio.vercel.app/images/mansha_portrait.jpg",
       sameAs: [
         "https://github.com/manshahussain5",
@@ -114,7 +115,7 @@ const jsonLd = {
       url: "https://manshahussain-portfolio.vercel.app",
       name: "Mansha Hussain Portfolio",
       description:
-        "Portfolio of Mansha Hussain — Data Scientist & Full Stack Developer specializing in modern data science, machine learning solutions, Next.js, React, and Python.",
+        "Portfolio of Mansha Hussain — Software Engineer & Full-Stack Developer specializing in Full stack Web Development, Shopify stores, and AI solutions.",
       publisher: {
         "@id": "https://manshahussain-portfolio.vercel.app/#person",
       },
