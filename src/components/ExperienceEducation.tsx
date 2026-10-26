@@ -265,7 +265,7 @@ export default function ExperienceEducation() {
   return (
     <section
       id="experience"
-      className="relative scroll-mt-[70px] pt-4 sm:pt-6 md:pt-8 pb-6 sm:pb-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      className="relative scroll-mt-[70px] pt-4 sm:pt-6 md:pt-8 pb-6 sm:pb-8 max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8"
     >
       {/* Section Header */}
       <AnimatedHeading
@@ -274,15 +274,16 @@ export default function ExperienceEducation() {
         subtitle="Explore verified industry roles, academic credentials, and official certifications."
         align="center"
         className="mb-2 lg:mb-2.5"
-        subtitleClassName="max-w-3xl sm:whitespace-nowrap"
+        subtitleClassName="max-w-3xl"
       />
 
-      {/* Modern Interactive Tab Segmented Switcher with Clean Square Aesthetics */}
-      <div className="flex items-center justify-center mb-3 sm:mb-3.5">
-        <div className="inline-flex p-1 rounded-xl bg-white/95 border border-slate-200/90 shadow-xs backdrop-blur-md">
+      {/* Modern Interactive Tab Segmented Switcher - 100% Mobile Fluid & Adaptive */}
+      <div className="w-full max-w-xl mx-auto flex items-center justify-center mb-3.5 sm:mb-4 px-1">
+        <div className="w-full sm:w-auto grid grid-cols-3 sm:flex p-1 rounded-xl bg-white/95 border border-slate-200/90 shadow-xs backdrop-blur-md gap-1">
           <button
+            type="button"
             onClick={() => setActiveTab("experience")}
-            className={`relative flex items-center gap-2 px-3.5 sm:px-4.5 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
+            className={`relative flex items-center justify-center gap-1.5 sm:gap-2 px-2 xs:px-3 sm:px-4.5 py-2 sm:py-2 rounded-lg text-[11px] xs:text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
               activeTab === "experience"
                 ? "text-white shadow-xs"
                 : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
@@ -295,11 +296,12 @@ export default function ExperienceEducation() {
                 transition={{ type: "spring", stiffness: 400, damping: 30 }}
               />
             )}
-            <span className="relative z-10 flex items-center gap-2">
-              <Briefcase className="w-4 h-4" />
-              <span>Work Experience</span>
+            <span className="relative z-10 flex items-center justify-center gap-1.5 sm:gap-2">
+              <Briefcase className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+              <span className="hidden xs:inline sm:inline">Experience</span>
+              <span className="xs:hidden">Roles</span>
               <span
-                className={`px-1.5 py-0.2 rounded text-[10px] font-extrabold ${
+                className={`px-1.5 py-0.2 rounded text-[9px] sm:text-[10px] font-extrabold hidden md:inline-flex ${
                   activeTab === "experience"
                     ? "bg-white/20 text-white"
                     : "bg-slate-100 text-slate-600"
@@ -311,8 +313,9 @@ export default function ExperienceEducation() {
           </button>
 
           <button
+            type="button"
             onClick={() => setActiveTab("education")}
-            className={`relative flex items-center gap-2 px-3.5 sm:px-4.5 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
+            className={`relative flex items-center justify-center gap-1.5 sm:gap-2 px-2 xs:px-3 sm:px-4.5 py-2 sm:py-2 rounded-lg text-[11px] xs:text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
               activeTab === "education"
                 ? "text-white shadow-xs"
                 : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
@@ -325,15 +328,17 @@ export default function ExperienceEducation() {
                 transition={{ type: "spring", stiffness: 400, damping: 30 }}
               />
             )}
-            <span className="relative z-10 flex items-center gap-2">
-              <GraduationCap className="w-4 h-4" />
-              <span>Academic Education</span>
+            <span className="relative z-10 flex items-center justify-center gap-1.5 sm:gap-2">
+              <GraduationCap className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+              <span className="hidden xs:inline sm:inline">Education</span>
+              <span className="xs:hidden">Degree</span>
             </span>
           </button>
 
           <button
+            type="button"
             onClick={() => setActiveTab("certifications")}
-            className={`relative flex items-center gap-2 px-3.5 sm:px-4.5 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
+            className={`relative flex items-center justify-center gap-1.5 sm:gap-2 px-2 xs:px-3 sm:px-4.5 py-2 sm:py-2 rounded-lg text-[11px] xs:text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
               activeTab === "certifications"
                 ? "text-white shadow-xs"
                 : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
@@ -346,11 +351,12 @@ export default function ExperienceEducation() {
                 transition={{ type: "spring", stiffness: 400, damping: 30 }}
               />
             )}
-            <span className="relative z-10 flex items-center gap-2">
-              <Award className="w-4 h-4" />
-              <span>Certifications</span>
+            <span className="relative z-10 flex items-center justify-center gap-1.5 sm:gap-2">
+              <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+              <span className="hidden xs:inline sm:inline">Certifications</span>
+              <span className="xs:hidden">Certs</span>
               <span
-                className={`px-1.5 py-0.2 rounded text-[10px] font-extrabold ${
+                className={`px-1.5 py-0.2 rounded text-[9px] sm:text-[10px] font-extrabold hidden md:inline-flex ${
                   activeTab === "certifications"
                     ? "bg-white/20 text-white"
                     : "bg-slate-100 text-slate-600"
@@ -372,7 +378,7 @@ export default function ExperienceEducation() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.25 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5"
+            className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-4 lg:gap-5"
           >
             {experience.map((item, index) => {
               const tags = item.skills || experienceTags[item.id] || [];
@@ -392,7 +398,7 @@ export default function ExperienceEducation() {
                     ease: [0.22, 1, 0.36, 1],
                   }}
                   whileHover={{ y: -3, transition: { duration: 0.2 } }}
-                  className={`group relative p-4 sm:p-5 rounded-xl bg-white/95 backdrop-blur-sm ${theme.cardBorder} ${theme.borderHover} ${theme.cardHoverBg} transition-all duration-300 flex flex-col justify-between h-full overflow-hidden`}
+                  className={`group relative p-3.5 xs:p-4 sm:p-5 rounded-xl bg-white/95 backdrop-blur-sm ${theme.cardBorder} ${theme.borderHover} ${theme.cardHoverBg} transition-all duration-300 flex flex-col justify-between h-full overflow-hidden`}
                 >
                   {/* Top Accent Stripe with Glow */}
                   <div
@@ -406,7 +412,7 @@ export default function ExperienceEducation() {
 
                   <div className="relative z-10">
                     {/* Header: Monogram + Company Link + Period */}
-                    <div className="flex items-start justify-between gap-2.5 mb-2.5">
+                    <div className="flex flex-wrap sm:flex-nowrap items-start justify-between gap-2 mb-2.5">
                       <div className="flex items-start gap-2.5 min-w-0 flex-1">
                         <div
                           className={`w-7 h-7 rounded-lg flex items-center justify-center font-black text-[11px] border shrink-0 mt-0.5 transition-transform duration-300 group-hover:scale-105 ${theme.badgeBg}`}
@@ -436,7 +442,7 @@ export default function ExperienceEducation() {
                       </div>
 
                       <span
-                        className={`inline-flex items-center gap-1.5 text-[10px] font-semibold px-2 py-0.5 rounded-md border shrink-0 mt-0.5 whitespace-nowrap ${
+                        className={`inline-flex items-center gap-1.5 text-[10px] font-semibold px-2 py-0.5 rounded-md border shrink-0 self-start mt-0.5 whitespace-nowrap ${
                           isCurrent
                             ? "bg-emerald-50 text-emerald-700 border-emerald-200/90 shadow-2xs"
                             : "bg-slate-50 text-slate-600 border-slate-200/80"
@@ -453,25 +459,25 @@ export default function ExperienceEducation() {
                     </div>
 
                     {/* Role Title */}
-                    <h3 className="text-sm sm:text-[15px] font-bold text-slate-900 group-hover:text-[#2563EB] transition-colors leading-snug mb-1.5">
+                    <h3 className="text-sm sm:text-[15px] font-bold text-slate-900 group-hover:text-[#2563EB] transition-colors leading-snug mb-1.5 break-words">
                       {item.role}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-slate-600 text-[11.5px] sm:text-xs leading-relaxed mb-3 line-clamp-2">
+                    <p className="text-slate-600 text-[11.5px] sm:text-xs leading-relaxed mb-3 line-clamp-3 sm:line-clamp-2">
                       {item.description}
                     </p>
                   </div>
 
-                  {/* Tech Skills & Core Focus - Exactly 4 Stacked Lines like Services */}
-                  <div className="relative z-10 pt-2.5 border-t border-slate-100 space-y-2">
+                  {/* Tech Skills & Core Focus */}
+                  <div className="relative z-10 pt-2.5 border-t border-slate-100 space-y-1.5 sm:space-y-2">
                     {tags.map((tag) => (
-                      <div key={tag}>
+                      <div key={tag} className="w-full">
                         <span
-                          className={`inline-flex items-center gap-2 px-2.5 py-1 rounded-lg text-[11px] sm:text-xs font-medium border transition-colors duration-200 ${theme.tagStyle} ${theme.tagHover}`}
+                          className={`inline-flex items-center gap-2 px-2.5 py-1 rounded-lg text-[11px] sm:text-xs font-medium border transition-colors duration-200 max-w-full ${theme.tagStyle} ${theme.tagHover}`}
                         >
                           <span className="w-1.5 h-1.5 rounded-full bg-current opacity-75 shrink-0" />
-                          <span>{tag}</span>
+                          <span className="break-words leading-tight">{tag}</span>
                         </span>
                       </div>
                     ))}
@@ -487,7 +493,7 @@ export default function ExperienceEducation() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="rounded-2xl bg-gradient-to-br from-white via-white to-emerald-50/30 border border-slate-200/90 shadow-[0_8px_30px_rgba(16,185,129,0.08),0_1px_3px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_36px_rgba(16,185,129,0.14)] transition-all duration-300 p-5 sm:p-6 lg:p-7 relative overflow-hidden"
+            className="rounded-2xl bg-gradient-to-br from-white via-white to-emerald-50/30 border border-slate-200/90 shadow-[0_8px_30px_rgba(16,185,129,0.08),0_1px_3px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_36px_rgba(16,185,129,0.14)] transition-all duration-300 p-4 xs:p-5 sm:p-6 lg:p-7 relative overflow-hidden"
           >
             {/* Top Multi-Color Accent Stripe with Luminous Pulse */}
             <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-emerald-500 via-teal-500 to-[#2563EB]" />
@@ -496,19 +502,19 @@ export default function ExperienceEducation() {
             <div className="absolute -bottom-20 -right-20 w-56 h-56 rounded-full bg-gradient-to-br from-emerald-500/10 via-teal-500/5 to-transparent blur-3xl pointer-events-none" />
             <div className="absolute -top-20 -left-20 w-48 h-48 rounded-full bg-gradient-to-br from-blue-500/10 via-indigo-500/5 to-transparent blur-3xl pointer-events-none" />
 
-            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 lg:gap-8 items-center">
               {/* Left Column: Degree & University Identity */}
               <div className="lg:col-span-5 space-y-3.5 sm:space-y-4">
-                <div className="flex items-start gap-4">
+                <div className="flex flex-col xs:flex-row items-start gap-3.5 sm:gap-4">
                   <motion.div
                     whileHover={{ scale: 1.08, rotate: 4 }}
                     transition={{ type: "spring", stiffness: 400, damping: 15 }}
-                    className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 text-white shadow-[0_4px_16px_rgba(16,185,129,0.3)] flex items-center justify-center shrink-0 cursor-pointer"
+                    className="w-11 h-11 xs:w-12 xs:h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 text-white shadow-[0_4px_16px_rgba(16,185,129,0.3)] flex items-center justify-center shrink-0 cursor-pointer"
                   >
-                    <GraduationCap className="w-6 h-6 sm:w-7 sm:h-7" />
+                    <GraduationCap className="w-5 h-5 xs:w-6 xs:h-6 sm:w-7 sm:h-7" />
                   </motion.div>
-                  <div>
-                    <div className="flex items-center gap-2 mb-1">
+                  <div className="min-w-0 flex-1">
+                    <div className="flex flex-wrap items-center gap-2 mb-1">
                       <span className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50/90 border border-emerald-200/90 px-2.5 py-0.5 rounded-md shadow-2xs">
                         <span className="relative flex h-1.5 w-1.5">
                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
@@ -516,31 +522,31 @@ export default function ExperienceEducation() {
                         </span>
                         <span>Degree Completed</span>
                       </span>
-                      <span className="text-xs font-semibold text-slate-500">
+                      <span className="text-xs font-semibold text-slate-500 whitespace-nowrap">
                         {primaryDegree.period}
                       </span>
                     </div>
 
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight leading-snug">
+                    <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight leading-snug break-words">
                       {primaryDegree.degree}
                     </h3>
-                    <p className="text-sm sm:text-base font-bold bg-gradient-to-r from-[#2563EB] via-indigo-600 to-cyan-600 bg-clip-text text-transparent mt-0.5">
+                    <p className="text-xs xs:text-sm sm:text-base font-bold bg-gradient-to-r from-[#2563EB] via-indigo-600 to-cyan-600 bg-clip-text text-transparent mt-0.5 break-words">
                       {primaryDegree.institution}
                     </p>
                   </div>
                 </div>
 
-                <p className="text-[13px] sm:text-sm text-slate-600 leading-relaxed max-w-lg">
+                <p className="text-xs xs:text-[13px] sm:text-sm text-slate-600 leading-relaxed max-w-lg">
                   {primaryDegree.description}
                 </p>
 
-                <div className="pt-1 flex flex-wrap items-center gap-3">
+                <div className="pt-1 flex flex-wrap items-center gap-3 w-full sm:w-auto">
                   <motion.a
                     href={personal.resumeUrl}
                     download="Mansha-Hussain-CV.pdf"
                     whileHover={{ scale: 1.03, y: -1 }}
                     whileTap={{ scale: 0.98 }}
-                    className="group/btn relative overflow-hidden inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#2563EB] via-[#3B82F6] to-[#0284C7] hover:from-[#1D4ED8] hover:via-[#2563EB] hover:to-[#0284C7] text-white text-xs sm:text-sm font-bold transition-all shadow-[0_4px_16px_rgba(37,99,235,0.3)] hover:shadow-[0_8px_24px_rgba(37,99,235,0.45)]"
+                    className="group/btn relative overflow-hidden inline-flex items-center justify-center gap-2 w-full sm:w-auto px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#2563EB] via-[#3B82F6] to-[#0284C7] hover:from-[#1D4ED8] hover:via-[#2563EB] hover:to-[#0284C7] text-white text-xs sm:text-sm font-bold transition-all shadow-[0_4px_16px_rgba(37,99,235,0.3)] hover:shadow-[0_8px_24px_rgba(37,99,235,0.45)]"
                   >
                     <Download className="w-4 h-4 group-hover/btn:translate-y-0.5 transition-transform duration-200" />
                     <span>Download Official CV</span>
@@ -548,23 +554,23 @@ export default function ExperienceEducation() {
                 </div>
               </div>
 
-              {/* Right Column: Key Coursework Pillars with Refined Elevation & Slightly Roomier Shape */}
-              <div className="lg:col-span-7 bg-white/95 backdrop-blur-xs border border-slate-200/90 rounded-2xl p-4 sm:p-5 shadow-[0_2px_12px_rgba(0,0,0,0.03)]">
-                <div className="flex items-center justify-between gap-2 mb-3 sm:mb-3.5">
+              {/* Right Column: Key Coursework Pillars */}
+              <div className="lg:col-span-7 bg-white/95 backdrop-blur-xs border border-slate-200/90 rounded-2xl p-3.5 sm:p-5 shadow-[0_2px_12px_rgba(0,0,0,0.03)]">
+                <div className="flex flex-col xs:flex-row xs:items-center justify-between gap-2 mb-3 sm:mb-3.5">
                   <div className="flex items-center gap-2">
-                    <span className="p-1.5 rounded-lg bg-blue-100/80 text-[#2563EB]">
+                    <span className="p-1.5 rounded-lg bg-blue-100/80 text-[#2563EB] shrink-0">
                       <BookOpen className="w-4 h-4" />
                     </span>
-                    <h4 className="text-xs sm:text-[13px] font-bold text-slate-900 uppercase tracking-wider">
+                    <h4 className="text-[11.5px] xs:text-xs sm:text-[13px] font-bold text-slate-900 uppercase tracking-wider">
                       Core Software Engineering Pillars
                     </h4>
                   </div>
-                  <span className="text-[10.5px] sm:text-[11px] font-bold px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200/80">
+                  <span className="self-start xs:self-auto text-[10px] xs:text-[10.5px] sm:text-[11px] font-bold px-2 py-0.5 xs:px-2.5 xs:py-1 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200/80 whitespace-nowrap">
                     6 Specialized Modules
                   </span>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 xs:gap-2.5 sm:gap-3">
                   {COURSEWORK_PILLARS.map((course, index) => {
                     const IconComponent = course.icon;
                     return (
@@ -574,18 +580,18 @@ export default function ExperienceEducation() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.06 + index * 0.04, duration: 0.25 }}
                         whileHover={{ scale: 1.02, x: 2, transition: { duration: 0.15 } }}
-                        className={`group/pillar relative px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-xl bg-white border border-slate-200/85 ${course.borderHover} hover:bg-slate-50/60 transition-all duration-200 flex items-center gap-3 cursor-default shadow-xs`}
+                        className={`group/pillar relative px-2.5 py-2 sm:px-3.5 sm:py-2.5 rounded-xl bg-white border border-slate-200/85 ${course.borderHover} hover:bg-slate-50/60 transition-all duration-200 flex items-center gap-2.5 sm:gap-3 cursor-default shadow-xs`}
                       >
                         <div
-                          className={`w-8 h-8 sm:w-9 sm:h-9 rounded-lg border flex items-center justify-center shrink-0 ${course.iconBg} ${course.iconColor} group-hover/pillar:scale-110 group-hover/pillar:rotate-6 transition-transform duration-200 shadow-2xs`}
+                          className={`w-7 h-7 sm:w-9 sm:h-9 rounded-lg border flex items-center justify-center shrink-0 ${course.iconBg} ${course.iconColor} group-hover/pillar:scale-110 group-hover/pillar:rotate-6 transition-transform duration-200 shadow-2xs`}
                         >
-                          <IconComponent className="w-4 h-4" />
+                          <IconComponent className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                         </div>
                         <div className="min-w-0 flex-1">
                           <p className="text-xs sm:text-[13px] font-bold text-slate-900 leading-tight group-hover/pillar:text-slate-950 transition-colors">
                             {course.name}
                           </p>
-                          <p className="text-[10.5px] sm:text-xs text-slate-500 leading-tight mt-0.5 truncate">
+                          <p className="text-[10px] sm:text-xs text-slate-500 leading-tight mt-0.5 truncate">
                             {course.desc}
                           </p>
                         </div>
@@ -603,7 +609,7 @@ export default function ExperienceEducation() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.25 }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 lg:gap-4"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-3.5 lg:gap-4"
           >
             {certifications.map((item, index) => {
               const theme = CERTIFICATION_THEMES[item.id] || DEFAULT_THEME;
@@ -618,7 +624,7 @@ export default function ExperienceEducation() {
                     ease: [0.22, 1, 0.36, 1],
                   }}
                   whileHover={{ y: -3, transition: { duration: 0.2 } }}
-                  className={`group relative p-4 rounded-xl bg-white/95 backdrop-blur-sm ${theme.cardBorder} ${theme.borderHover} ${theme.cardHoverBg} transition-all duration-300 flex flex-col justify-between h-full overflow-hidden`}
+                  className={`group relative p-3.5 xs:p-4 rounded-xl bg-white/95 backdrop-blur-sm ${theme.cardBorder} ${theme.borderHover} ${theme.cardHoverBg} transition-all duration-300 flex flex-col justify-between h-full overflow-hidden`}
                 >
                   {/* Top Accent Stripe with Glow */}
                   <div
@@ -662,13 +668,13 @@ export default function ExperienceEducation() {
 
                     {/* Certificate Title - Highlighted with Theme Color */}
                     <h3
-                      className={`text-[13.5px] sm:text-sm font-extrabold ${theme.titleColor || "text-slate-900"} transition-colors leading-snug mb-2 min-h-[2.4rem] flex items-center`}
+                      className={`text-[13px] sm:text-sm font-extrabold ${theme.titleColor || "text-slate-900"} transition-colors leading-snug mb-2 min-h-0 sm:min-h-[2.4rem] flex items-center break-words`}
                     >
                       {item.title}
                     </h3>
 
-                    {/* Credential Status Row - Perfectly balanced single line */}
-                    <div className="flex items-center justify-between gap-2 mb-2.5 text-[10.5px]">
+                    {/* Credential Status Row */}
+                    <div className="flex flex-wrap items-center justify-between gap-1.5 mb-2.5 text-[10.5px]">
                       {item.grade ? (
                         <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 font-bold border border-emerald-200/80">
                           <ShieldCheck className="w-3 h-3 text-emerald-600 shrink-0" />
@@ -677,7 +683,7 @@ export default function ExperienceEducation() {
                       ) : item.credentialId ? (
                         <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-slate-100/90 text-slate-700 font-mono font-semibold border border-slate-200/70">
                           <ShieldCheck className="w-3 h-3 text-slate-500 shrink-0" />
-                          <span className="truncate max-w-[130px]">{item.credentialId}</span>
+                          <span className="truncate max-w-[120px] xs:max-w-[140px]">{item.credentialId}</span>
                         </span>
                       ) : (
                         <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 font-semibold border border-emerald-200/70">
@@ -691,7 +697,7 @@ export default function ExperienceEducation() {
                           href={item.verificationUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-[#2563EB] hover:text-blue-700 font-bold hover:underline shrink-0"
+                          className="inline-flex items-center gap-1 text-[#2563EB] hover:text-blue-700 font-bold hover:underline shrink-0 py-0.5"
                         >
                           <span>Verify</span>
                           <ExternalLink className="w-2.5 h-2.5" />
@@ -704,10 +710,10 @@ export default function ExperienceEducation() {
                     </div>
                   </div>
 
-                  {/* Competencies & Skills - Exactly 4 Clean Stacked Lines */}
+                  {/* Competencies & Skills */}
                   <div className="relative z-10 pt-2.5 border-t border-slate-100 space-y-1.5">
                     {item.skills.map((skill) => (
-                      <div key={skill}>
+                      <div key={skill} className="w-full">
                         <span
                           className={`inline-flex items-center gap-2 px-2.5 py-1 rounded-lg text-[11px] sm:text-xs font-medium border transition-colors duration-200 ${theme.tagStyle} ${theme.tagHover} w-full`}
                         >
