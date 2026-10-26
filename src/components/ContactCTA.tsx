@@ -139,9 +139,9 @@ export default function ContactCTA() {
               </div>
 
               {/* Response Time Footnote */}
-              <div className="flex items-center gap-2 px-1 pt-0.5 text-xs text-slate-500">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
-                <span>Direct response guaranteed within 24 hours &bull; Available worldwide</span>
+              <div className="flex items-start gap-2 px-1 pt-0.5 text-xs text-slate-500">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
+                <span className="leading-tight">Direct response guaranteed within 24 hours &bull; Available worldwide</span>
               </div>
             </div>
           </div>

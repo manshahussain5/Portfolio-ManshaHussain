@@ -169,17 +169,17 @@ export default function Hero() {
 
               {/* Concentric Decorative Rings */}
               <div className="absolute -inset-4 rounded-full border border-[#2563EB]/15 animate-spin-slow pointer-events-none" />
-              <div className="absolute -inset-10 rounded-full border border-dashed border-[#2563EB]/15 pointer-events-none" />
+              <div className="hidden xs:block absolute -inset-10 rounded-full border border-dashed border-[#2563EB]/15 pointer-events-none" />
 
               {/* Modern Rounded Image Frame with Glass specular rim */}
-              <div className="relative w-[270px] xs:w-[290px] sm:w-[350px] lg:w-[360px] h-[320px] xs:h-[350px] sm:h-[400px] lg:h-[410px] rounded-3xl overflow-hidden border-2 border-white bg-white shadow-[0_20px_50px_rgba(37,99,235,0.12),0_4px_16px_rgba(0,0,0,0.04)] group">
+              <div className="relative w-[260px] xs:w-[290px] sm:w-[350px] lg:w-[360px] h-[310px] xs:h-[350px] sm:h-[400px] lg:h-[410px] rounded-3xl overflow-hidden border-2 border-white bg-white shadow-[0_20px_50px_rgba(37,99,235,0.12),0_4px_16px_rgba(0,0,0,0.04)] group">
                 <Image
                   src="/images/mansha_portrait.jpg"
                   alt="Mansha Hussain - Software Engineer & Full-Stack Developer"
                   fill
                   priority
                   className="object-cover object-top transition-transform duration-700 group-hover:scale-105 z-0"
-                  sizes="(max-width: 640px) 270px, (max-width: 768px) 350px, 360px"
+                  sizes="(max-width: 640px) 290px, (max-width: 768px) 350px, 360px"
                 />
 
                 {/* Subtle vignette gradient over bottom of image */}

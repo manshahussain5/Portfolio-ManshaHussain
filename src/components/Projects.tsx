@@ -119,9 +119,9 @@ export default function Projects() {
           onClick={() => scroll("left")}
           disabled={!canScrollLeft}
           aria-label="Previous projects"
-          className="shrink-0 w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-white shadow-[0_4px_18px_rgba(0,0,0,0.08)] border border-slate-200/90 flex items-center justify-center text-slate-700 hover:text-[#2563EB] hover:bg-slate-50 active:scale-95 disabled:opacity-20 disabled:cursor-not-allowed disabled:hover:text-slate-700 disabled:hover:bg-white disabled:active:scale-100 transition-all z-10"
+          className="shrink-0 w-8 h-8 xs:w-9 xs:h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-white shadow-[0_4px_18px_rgba(0,0,0,0.08)] border border-slate-200/90 flex items-center justify-center text-slate-700 hover:text-[#2563EB] hover:bg-slate-50 active:scale-95 disabled:opacity-20 disabled:cursor-not-allowed disabled:hover:text-slate-700 disabled:hover:bg-white disabled:active:scale-100 transition-all z-10"
         >
-          <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+          <ChevronLeft className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6" />
         </button>
 
         {/* Scroller Track Container (Exactly 3 Cards per screen on desktop) */}
@@ -196,9 +196,9 @@ export default function Projects() {
           onClick={() => scroll("right")}
           disabled={!canScrollRight}
           aria-label="Next projects"
-          className="shrink-0 w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-white shadow-[0_4px_18px_rgba(0,0,0,0.08)] border border-slate-200/90 flex items-center justify-center text-slate-700 hover:text-[#2563EB] hover:bg-slate-50 active:scale-95 disabled:opacity-20 disabled:cursor-not-allowed disabled:hover:text-slate-700 disabled:hover:bg-white disabled:active:scale-100 transition-all z-10"
+          className="shrink-0 w-8 h-8 xs:w-9 xs:h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-white shadow-[0_4px_18px_rgba(0,0,0,0.08)] border border-slate-200/90 flex items-center justify-center text-slate-700 hover:text-[#2563EB] hover:bg-slate-50 active:scale-95 disabled:opacity-20 disabled:cursor-not-allowed disabled:hover:text-slate-700 disabled:hover:bg-white disabled:active:scale-100 transition-all z-10"
         >
-          <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+          <ChevronRight className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6" />
         </button>
       </div>
     </section>

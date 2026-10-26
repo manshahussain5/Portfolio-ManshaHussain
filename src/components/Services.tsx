@@ -119,11 +119,11 @@ export default function Services() {
               <div>
                 {/* Title & Description */}
                 <h3
-                  className={`text-base sm:text-lg lg:text-[17px] xl:text-[18px] font-bold text-slate-900 tracking-tight leading-snug mb-2 min-h-[2.75rem] lg:min-h-[3rem] flex items-center ${theme.color} transition-colors duration-200`}
+                  className={`text-base sm:text-lg lg:text-[17px] xl:text-[18px] font-bold text-slate-900 tracking-tight leading-snug mb-2 min-h-0 md:min-h-[2.75rem] lg:min-h-[3rem] flex items-center ${theme.color} transition-colors duration-200`}
                 >
                   {service.title}
                 </h3>
-                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4 lg:mb-5 min-h-[3.75rem] lg:min-h-[4rem]">
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4 lg:mb-5 min-h-0 md:min-h-[3.75rem] lg:min-h-[4rem]">
                   {service.description}
                 </p>
               </div>
@@ -131,12 +131,12 @@ export default function Services() {
               {/* Feature Tags with custom colored dots - Exactly 4 stacked lines */}
               <div className="space-y-2 pt-1">
                 {service.features.map((feat) => (
-                  <div key={feat}>
+                  <div key={feat} className="w-full">
                     <span
-                      className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium border transition-colors duration-200 ${theme.tagStyle}`}
+                      className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium border transition-colors duration-200 max-w-full ${theme.tagStyle}`}
                     >
                       <span className={`w-1.5 h-1.5 rounded-full ${theme.tagDot} shrink-0 opacity-80`} />
-                      <span>{feat}</span>
+                      <span className="break-words leading-tight">{feat}</span>
                     </span>
                   </div>
                 ))}

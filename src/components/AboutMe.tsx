@@ -142,10 +142,10 @@ export default function AboutMe() {
           </div>
 
           {/* Action CTA Buttons */}
-          <div className="flex flex-wrap sm:flex-nowrap items-center gap-2.5 sm:gap-3 mt-2">
+          <div className="flex flex-wrap sm:flex-nowrap items-center gap-2.5 sm:gap-3 mt-2 w-full sm:w-auto">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-xs font-bold transition-all shadow-sm hover:shadow-md"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-xs font-bold transition-all shadow-sm hover:shadow-md w-full xs:w-auto text-center"
             >
               <span>Get In Touch</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -153,7 +153,7 @@ export default function AboutMe() {
             <a
               href={p.resumeUrl}
               download="Mansha-Hussain-CV.pdf"
-              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-slate-50 border border-slate-200/90 hover:border-[#2563EB]/40 text-xs font-bold text-slate-700 hover:text-slate-900 transition-all shadow-sm"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-slate-50 border border-slate-200/90 hover:border-[#2563EB]/40 text-xs font-bold text-slate-700 hover:text-slate-900 transition-all shadow-sm w-full xs:w-auto text-center"
             >
               <span>Download Resume</span>
             </a>
@@ -275,7 +275,7 @@ export default function AboutMe() {
             </div>
 
             {/* Bottom Footer Note with 3D Verified Badge */}
-            <div className="pt-2.5 border-t border-slate-100/90 flex items-center justify-between text-xs">
+            <div className="pt-2.5 border-t border-slate-100/90 flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 text-xs">
               <span className="flex items-center gap-2 font-semibold text-slate-600">
                 <span className="relative flex h-2.5 w-2.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
@@ -284,7 +284,7 @@ export default function AboutMe() {
                 Open to Remote &amp; Hybrid roles
               </span>
               
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white text-[11px] font-bold shadow-[0_4px_12px_rgba(37,99,235,0.28)] hover:scale-105 transition-transform">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white text-[11px] font-bold shadow-[0_4px_12px_rgba(37,99,235,0.28)] hover:scale-105 transition-transform shrink-0">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 <span>Verified Dev</span>
               </span>
