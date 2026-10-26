@@ -174,7 +174,7 @@ export default function Hero() {
               {/* Modern Rounded Image Frame with Glass specular rim */}
               <div className="relative w-[270px] xs:w-[290px] sm:w-[350px] lg:w-[360px] h-[320px] xs:h-[350px] sm:h-[400px] lg:h-[410px] rounded-3xl overflow-hidden border-2 border-white bg-white shadow-[0_20px_50px_rgba(37,99,235,0.12),0_4px_16px_rgba(0,0,0,0.04)] group">
                 <Image
-                  src="/images/mansha_studio_v2.jpg"
+                  src="/images/mansha_portrait.jpg"
                   alt="Mansha Hussain - Software Engineer & Full-Stack Developer"
                   fill
                   priority

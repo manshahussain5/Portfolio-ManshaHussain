@@ -1,18 +1,27 @@
 # Mansha Hussain - Portfolio
 
-> Software Engineer & Full-Stack Developer specializing in Full stack Web Development, Shopify stores, and AI solutions.
+> Software Engineer & Full-Stack Developer specializing in Full stack Web Development, Shopify stores, and AI-powered solutions.
 
 ## About
-Mansha Hussain is a Software Engineering graduate and Full-Stack Developer based in Lahore, Pakistan. He builds responsive, scalable, and user-focused digital products by combining strong software engineering principles with practical expertise in web technologies and artificial intelligence.
+Mansha Hussain is a Software Engineering graduate and Full-Stack Developer based in Lahore, Pakistan. He builds responsive, scalable, and user-focused digital products by combining strong software engineering principles with practical expertise in web technologies and artificial intelligence. He also has experience with Google Ads and Meta Ads, connecting engineering excellence with digital business growth.
 
-## Primary Skills
-- Frontend: Next.js, React, TypeScript, Tailwind CSS, Framer Motion
-- Backend: Node.js, Express, Python, FastAPI, RESTful APIs
-- Data Science & ML: Python, Scikit-learn, Machine Learning, Deep Learning, NLP
+## Core Specializations & Skills
+- Web Engineering: Next.js (App Router), React, TypeScript, JavaScript (ES6+), Tailwind CSS, Framer Motion
+- Backend & APIs: Node.js, Express, Python, FastAPI, RESTful APIs, WebSockets
+- E-Commerce: Shopify Store Development, Liquid Theme Customization, Store Setup & App Integration
+- Artificial Intelligence & Data: Machine Learning, Deep Learning, Scikit-learn, NLP, Computer Vision, Prompt Engineering
 - Databases: MongoDB, PostgreSQL, Firebase, SQLite, MySQL
+- Growth & Marketing Tech: Google Ads, Meta (Facebook/Instagram) Ads, Tracking & Analytics
+
+## Verified Certifications & Credentials
+- Certiport Information Technology Specialist in JavaScript (Pearson VUE)
+- NAVTTC Prime Minister's Youth Skill Development Program - Full Stack MERN Development (Grade A+)
+- DigiSkills Training Program / Virtual University - Python for Artificial Intelligence & Machine Learning
+- British Council IELTS Academic - English Language Proficiency (CEFR B2)
 
 ## Contact & Links
 - Website: https://manshahussain-portfolio.vercel.app
 - GitHub: https://github.com/manshahussain5
 - LinkedIn: https://www.linkedin.com/in/manshahussain5/
 - Email: manshahussain520@gmail.com
+- WhatsApp: +92 344 6876587
