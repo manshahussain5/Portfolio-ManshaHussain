@@ -210,6 +210,18 @@ export default function ExperienceEducation() {
   const [activeTab, setActiveTab] = useState<"experience" | "education" | "certifications">("experience");
 
   useEffect(() => {
+    // Always ensure Experience (Roles) tab is active on initial load / refresh
+    setActiveTab("experience");
+
+    // If lingering #certifications is present in URL hash on refresh, normalize it to #experience
+    if (typeof window !== "undefined" && window.location.hash === "#certifications") {
+      window.history.replaceState(
+        null,
+        "",
+        window.location.pathname + window.location.search + "#experience"
+      );
+    }
+
     const handleSetTab = (e: Event) => {
       const customEvent = e as CustomEvent<"experience" | "education" | "certifications">;
       if (customEvent.detail) {
@@ -217,19 +229,10 @@ export default function ExperienceEducation() {
       }
     };
 
-    const handleHash = () => {
-      if (window.location.hash === "#certifications") {
-        setActiveTab("certifications");
-      }
-    };
-
     window.addEventListener("set-experience-tab", handleSetTab);
-    window.addEventListener("hashchange", handleHash);
-    handleHash();
 
     return () => {
       window.removeEventListener("set-experience-tab", handleSetTab);
-      window.removeEventListener("hashchange", handleHash);
     };
   }, []);
 
@@ -283,7 +286,7 @@ export default function ExperienceEducation() {
           <button
             type="button"
             onClick={() => setActiveTab("experience")}
-            className={`relative flex items-center justify-center gap-1.5 sm:gap-2 px-2 xs:px-3 sm:px-4.5 py-2 sm:py-2 rounded-lg text-[11px] xs:text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
+            className={`relative flex items-center justify-center gap-1.5 sm:gap-2 px-2.5 sm:px-4.5 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
               activeTab === "experience"
                 ? "text-white shadow-xs"
                 : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
@@ -298,8 +301,7 @@ export default function ExperienceEducation() {
             )}
             <span className="relative z-10 flex items-center justify-center gap-1.5 sm:gap-2">
               <Briefcase className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
-              <span className="hidden xs:inline sm:inline">Experience</span>
-              <span className="xs:hidden">Roles</span>
+              <span>Experience</span>
               <span
                 className={`px-1.5 py-0.2 rounded text-[9px] sm:text-[10px] font-extrabold hidden md:inline-flex ${
                   activeTab === "experience"
@@ -315,7 +317,7 @@ export default function ExperienceEducation() {
           <button
             type="button"
             onClick={() => setActiveTab("education")}
-            className={`relative flex items-center justify-center gap-1.5 sm:gap-2 px-2 xs:px-3 sm:px-4.5 py-2 sm:py-2 rounded-lg text-[11px] xs:text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
+            className={`relative flex items-center justify-center gap-1.5 sm:gap-2 px-2.5 sm:px-4.5 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
               activeTab === "education"
                 ? "text-white shadow-xs"
                 : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
@@ -330,15 +332,14 @@ export default function ExperienceEducation() {
             )}
             <span className="relative z-10 flex items-center justify-center gap-1.5 sm:gap-2">
               <GraduationCap className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
-              <span className="hidden xs:inline sm:inline">Education</span>
-              <span className="xs:hidden">Degree</span>
+              <span>Education</span>
             </span>
           </button>
 
           <button
             type="button"
             onClick={() => setActiveTab("certifications")}
-            className={`relative flex items-center justify-center gap-1.5 sm:gap-2 px-2 xs:px-3 sm:px-4.5 py-2 sm:py-2 rounded-lg text-[11px] xs:text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
+            className={`relative flex items-center justify-center gap-1.5 sm:gap-2 px-2.5 sm:px-4.5 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
               activeTab === "certifications"
                 ? "text-white shadow-xs"
                 : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
@@ -353,8 +354,7 @@ export default function ExperienceEducation() {
             )}
             <span className="relative z-10 flex items-center justify-center gap-1.5 sm:gap-2">
               <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
-              <span className="hidden xs:inline sm:inline">Certifications</span>
-              <span className="xs:hidden">Certs</span>
+              <span>Certifications</span>
               <span
                 className={`px-1.5 py-0.2 rounded text-[9px] sm:text-[10px] font-extrabold hidden md:inline-flex ${
                   activeTab === "certifications"

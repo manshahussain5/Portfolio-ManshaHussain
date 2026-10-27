@@ -15,7 +15,7 @@ import Footer from "@/components/Footer";
 
 export default function PortfolioContent() {
   return (
-    <main suppressHydrationWarning className="min-h-screen bg-[#F8FAFC] text-slate-800 flex flex-col selection:bg-[#2563EB] selection:text-white relative overflow-hidden">
+    <main suppressHydrationWarning className="min-h-screen bg-[#F8FAFC] text-slate-800 flex flex-col selection:bg-[#2563EB] selection:text-white relative overflow-x-clip">
       {/* Fixed Sticky Header */}
       <Navbar />
 

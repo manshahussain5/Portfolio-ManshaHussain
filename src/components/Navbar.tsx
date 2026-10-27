@@ -60,14 +60,42 @@ export default function Navbar() {
     e.preventDefault();
     const id = href.replace("#", "");
     setActiveSection(id);
+    setMobileMenuOpen(false);
+
     if (window.location.hash !== href) {
       window.history.pushState(null, "", href);
     }
 
-    const target = document.querySelector(href);
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
+    const scrollToTarget = () => {
+      if (href === "#home") {
+        try {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        } catch {
+          window.scrollTo(0, 0);
+        }
+        return;
+      }
+
+      const target = document.querySelector(href);
+      if (target) {
+        const navHeight = 72;
+        const elementPosition = target.getBoundingClientRect().top;
+        const currentScroll = window.scrollY || document.documentElement.scrollTop;
+        const offsetPosition = elementPosition + currentScroll - navHeight;
+
+        try {
+          window.scrollTo({
+            top: Math.max(0, offsetPosition),
+            behavior: "smooth",
+          });
+        } catch {
+          window.scrollTo(0, Math.max(0, offsetPosition));
+        }
+      }
+    };
+
+    // Small delay ensures mobile menu closing animation doesn't cancel smooth scroll
+    setTimeout(scrollToTarget, 60);
   };
 
   const navLinks = [
@@ -83,14 +111,12 @@ export default function Navbar() {
 
   return (
     <>
-
-
       <motion.header
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? "bg-white/85 backdrop-blur-xl border-b border-slate-200/80 py-3.5 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.06)]"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || mobileMenuOpen
+          ? "bg-white/95 backdrop-blur-xl border-b border-slate-200/80 py-3.5 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.06)]"
           : "bg-transparent py-5"
           }`}
       >
@@ -171,6 +197,21 @@ export default function Navbar() {
           </div>
         </div>
 
+        {/* Mobile Backdrop Overlay */}
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              onClick={() => setMobileMenuOpen(false)}
+              className="lg:hidden fixed inset-0 top-0 bg-slate-900/25 backdrop-blur-xs -z-10"
+              aria-hidden="true"
+            />
+          )}
+        </AnimatePresence>
+
         {/* Mobile & Tablet Drawer */}
         <AnimatePresence>
           {mobileMenuOpen && (
@@ -179,7 +220,7 @@ export default function Navbar() {
               animate={{ opacity: 1, height: "auto", y: 0 }}
               exit={{ opacity: 0, height: 0, y: -8 }}
               transition={{ duration: 0.25, ease: "easeInOut" }}
-              className="lg:hidden px-4 pt-3 pb-6 bg-white/95 border-b border-slate-200/80 backdrop-blur-xl shadow-xl overflow-hidden"
+              className="lg:hidden px-4 pt-3 pb-6 bg-white/95 border-b border-slate-200/80 backdrop-blur-xl shadow-xl max-h-[calc(100dvh-75px)] overflow-y-auto"
             >
               <div className="flex flex-col gap-1">
                 {navLinks.map((link) => {
@@ -188,11 +229,8 @@ export default function Navbar() {
                     <a
                       key={link.name}
                       href={link.href}
-                      onClick={(e) => {
-                        setMobileMenuOpen(false);
-                        handleNavClick(e, link.href);
-                      }}
-                      className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${isActive
+                      onClick={(e) => handleNavClick(e, link.href)}
+                      className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-colors cursor-pointer ${isActive
                         ? "text-[#2563EB] bg-[#2563EB]/10 font-semibold"
                         : "text-slate-700 hover:text-slate-950 hover:bg-slate-100"
                         }`}
@@ -205,7 +243,8 @@ export default function Navbar() {
                   <a
                     href={portfolioData.personal.resumeUrl}
                     download="Mansha-Hussain-CV.pdf"
-                    className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-bold text-white rounded-xl bg-gradient-to-r from-[#2563EB] to-[#0284C7] shadow-md transition-all"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-bold text-white rounded-xl bg-gradient-to-r from-[#2563EB] to-[#0284C7] shadow-md transition-all cursor-pointer"
                   >
                     <Download className="w-4 h-4" />
                     <span>Download CV</span>
