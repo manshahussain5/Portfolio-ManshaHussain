@@ -1,9 +1,9 @@
 # Mansha Hussain - Portfolio
 
-> Software Engineer & Full-Stack Developer specializing in Full stack Web Development, Shopify stores, and AI-powered solutions.
+> Software Engineer, Full-Stack Developer & AI Enthusiast specializing in Full stack Web Development, Shopify stores, and AI-powered solutions.
 
 ## About
-Mansha Hussain is a Software Engineering graduate and Full-Stack Developer based in Lahore, Pakistan. He builds responsive, scalable, and user-focused digital products by combining strong software engineering principles with practical expertise in web technologies and artificial intelligence. He also has experience with Google Ads and Meta Ads, connecting engineering excellence with digital business growth.
+Mansha Hussain is a Software Engineering graduate, Full-Stack Developer, and AI Enthusiast based in Lahore, Pakistan. He builds responsive, scalable, and user-focused digital products by combining strong software engineering principles with practical expertise in web technologies and artificial intelligence. He also has experience with Google Ads and Meta Ads, connecting engineering excellence with digital business growth.
 
 ## Core Specializations & Skills
 - Web Engineering: Next.js (App Router), React, TypeScript, JavaScript (ES6+), Tailwind CSS, Framer Motion

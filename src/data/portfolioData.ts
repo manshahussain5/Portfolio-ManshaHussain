@@ -75,9 +75,9 @@ export const portfolioData = {
     firstName: "Mansha",
     lastName: "Hussain",
     badge: "Hello, I'm",
-    role: "Software Engineer & Full-Stack Developer",
-    rolePrefix: "Software Engineer & ",
-    roleHighlight: "Full-Stack Developer",
+    role: "Software Engineer, Full-Stack Developer & AI Enthusiast",
+    rolePrefix: "Software Engineer, Full-Stack Developer & ",
+    roleHighlight: "AI Enthusiast",
     tagline:
       "Software Engineering graduate specializing in Full stack Web Development, Shopify stores, and AI solutions. I build responsive, scalable, and user-focused digital products combining strong engineering principles with modern web and AI expertise.",
     aboutHeading: "About Me",

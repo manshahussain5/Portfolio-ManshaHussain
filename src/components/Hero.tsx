@@ -1,14 +1,51 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { ArrowRight, MessageSquare, Sparkles, Award } from "lucide-react";
 import { GithubIcon, LinkedinIcon, GmailIcon, WhatsAppIcon } from "@/components/Icons";
 import { portfolioData } from "@/data/portfolioData";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+
+const TYPEWRITER_ROLES = ["Web Developer", "AI Enthusiast"];
 
 export default function Hero() {
   const p = portfolioData.personal;
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentWord = TYPEWRITER_ROLES[roleIndex];
+    let timer: NodeJS.Timeout;
+
+    if (!isDeleting) {
+      if (displayedText.length < currentWord.length) {
+        timer = setTimeout(() => {
+          setDisplayedText(currentWord.slice(0, displayedText.length + 1));
+        }, 80);
+      } else {
+        // Shorter, snappier wait time (1.2s instead of 2.5s)
+        timer = setTimeout(() => {
+          setIsDeleting(true);
+        }, 1200);
+      }
+    } else {
+      if (displayedText.length > 0) {
+        timer = setTimeout(() => {
+          setDisplayedText(currentWord.slice(0, displayedText.length - 1));
+        }, 35);
+      } else {
+        // Quick 200ms pause before starting the next word
+        timer = setTimeout(() => {
+          setIsDeleting(false);
+          setRoleIndex((prev) => (prev + 1) % TYPEWRITER_ROLES.length);
+        }, 200);
+      }
+    }
+
+    return () => clearTimeout(timer);
+  }, [displayedText, isDeleting, roleIndex]);
 
   return (
     <section
@@ -56,17 +93,19 @@ export default function Hero() {
               </span>
             </motion.h1>
 
-            {/* Subtitle / Role */}
+            {/* Subtitle / Typewriter Role */}
             <motion.h2
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.48, ease: [0.22, 1, 0.36, 1], delay: 0.16 }}
-              className="text-lg sm:text-2xl font-bold text-slate-800 mb-3.5 flex flex-wrap items-center gap-1.5"
+              className="text-lg sm:text-2xl font-bold text-slate-800 mb-3.5 flex flex-wrap items-center gap-x-2 gap-y-1.5"
             >
-              <span>Software Engineer &amp; </span>
-              <span className="text-[#2563EB] font-bold inline-flex items-center gap-1">
-                Full-Stack Developer
-                <Sparkles className="w-4 h-4 text-[#0284C7] inline" />
+              <span>Software Engineer &amp;</span>
+              <span className="inline-flex items-center">
+                <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#2563EB] via-[#0284C7] to-[#38BDF8] min-h-[1.3em] inline-flex items-center">
+                  {displayedText || "\u00A0"}
+                </span>
+                <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-[#0284C7] inline ml-1.5 shrink-0 animate-pulse" />
               </span>
             </motion.h2>
 
@@ -175,7 +214,7 @@ export default function Hero() {
               <div className="relative w-[260px] xs:w-[290px] sm:w-[350px] lg:w-[360px] h-[310px] xs:h-[350px] sm:h-[400px] lg:h-[410px] rounded-3xl overflow-hidden border-2 border-white bg-white shadow-[0_20px_50px_rgba(37,99,235,0.12),0_4px_16px_rgba(0,0,0,0.04)] group">
                 <Image
                   src="/images/mansha_portrait.jpg"
-                  alt="Mansha Hussain - Software Engineer & Full-Stack Developer"
+                  alt="Mansha Hussain - Software Engineer, Full-Stack Developer & AI Enthusiast"
                   fill
                   priority
                   className="object-cover object-top transition-transform duration-700 group-hover:scale-105 z-0"

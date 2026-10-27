@@ -11,7 +11,7 @@ const fontSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://manshahussain-portfolio.vercel.app"),
-  title: "Mansha Hussain | Software Engineer & Full-Stack Developer",
+  title: "Mansha Hussain | Software Engineer, Full-Stack Developer & AI Enthusiast",
   description:
     "Software Engineering graduate specializing in Full stack Web Development, Shopify stores, and AI solutions. Building responsive, scalable, and user-focused digital products.",
   keywords: [
@@ -20,6 +20,8 @@ export const metadata: Metadata = {
     "Software Engineer",
     "Full-Stack Developer",
     "Full Stack Web Developer",
+    "AI Enthusiast",
+    "Artificial Intelligence",
     "Shopify Developer",
     "Shopify Store Expert",
     "Web Development",
@@ -36,7 +38,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Mansha Hussain", url: "https://manshahussain-portfolio.vercel.app" }],
   creator: "Mansha Hussain",
   openGraph: {
-    title: "Mansha Hussain | Software Engineer & Full-Stack Developer",
+    title: "Mansha Hussain | Software Engineer, Full-Stack Developer & AI Enthusiast",
     description:
       "Software Engineering graduate specializing in Full stack Web Development, Shopify stores, and AI solutions. I build responsive, scalable, and user-focused digital products.",
     url: "https://manshahussain-portfolio.vercel.app",
@@ -46,7 +48,7 @@ export const metadata: Metadata = {
         url: "/images/mansha_portrait.jpg",
         width: 1200,
         height: 1200,
-        alt: "Mansha Hussain - Software Engineer & Full-Stack Developer",
+        alt: "Mansha Hussain - Software Engineer, Full-Stack Developer & AI Enthusiast",
       },
     ],
     locale: "en_US",
@@ -54,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mansha Hussain | Software Engineer & Full-Stack Developer",
+    title: "Mansha Hussain | Software Engineer, Full-Stack Developer & AI Enthusiast",
     description:
       "Software Engineering graduate specializing in Full stack Web Development, Shopify stores, and AI solutions.",
     images: ["/images/mansha_portrait.jpg"],
@@ -86,7 +88,7 @@ const jsonLd = {
       "@id": "https://manshahussain-portfolio.vercel.app/#person",
       name: "Mansha Hussain",
       url: "https://manshahussain-portfolio.vercel.app",
-      jobTitle: "Software Engineer & Full-Stack Developer",
+      jobTitle: "Software Engineer, Full-Stack Developer & AI Enthusiast",
       image: "https://manshahussain-portfolio.vercel.app/images/mansha_portrait.jpg",
       sameAs: [
         "https://github.com/manshahussain5",
@@ -168,7 +170,7 @@ const jsonLd = {
       url: "https://manshahussain-portfolio.vercel.app",
       name: "Mansha Hussain Portfolio",
       description:
-        "Portfolio of Mansha Hussain — Software Engineer & Full-Stack Developer specializing in Full stack Web Development, Shopify stores, and AI solutions.",
+        "Portfolio of Mansha Hussain — Software Engineer, Full-Stack Developer & AI Enthusiast specializing in Full stack Web Development, Shopify stores, and AI solutions.",
       publisher: {
         "@id": "https://manshahussain-portfolio.vercel.app/#person",
       },

@@ -186,9 +186,9 @@ export default function AboutMe() {
                 <h3 className="text-base sm:text-lg font-black text-slate-900 tracking-tight leading-tight">
                   {p.name}
                 </h3>
-                <p className="text-xs font-semibold text-[#2563EB] mt-0.5 flex items-center gap-1.5">
+                <p className="text-xs font-semibold text-[#2563EB] mt-0.5 flex items-center gap-1.5 flex-wrap">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-                  Software Engineer &amp; Full-Stack Developer
+                  Software Engineer | Full-Stack Developer | AI Enthusiast
                 </p>
               </div>
             </div>
