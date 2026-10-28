@@ -62,7 +62,15 @@ export const metadata: Metadata = {
     images: ["/images/mansha_portrait.jpg"],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", type: "image/png" },
+    ],
+    shortcut: ["/favicon.ico"],
   },
   alternates: {
     canonical: "https://manshahussain-portfolio.vercel.app",
